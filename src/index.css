@@ -3,9 +3,22 @@
 body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
+  padding-top: 100px;
+  background-color: var(--offwhite);
+  color: var(--text);
 }
 
 h1, h2, h3, h4 {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
+  color: var(--navy);
+}
+
+:root {
+  --navy: #0D2E4A;
+  --light-blue: #C8DFF0;
+  --offwhite: #F5F2ED;
+  --sand: #D4C9B8;
+  --text: #2C2C2A;
+  --text-muted: #6B6560;
 }
