@@ -20,8 +20,8 @@ function Footer () {
                 </div>
                 <div className="footer-column">
                     <h3>Sociale links</h3>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.instagram.com/kathrineliving/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/Kathrineliving" target="_blank" rel="noopener noreferrer">Facebook</a>
                 </div>
             </div>
         </footer>

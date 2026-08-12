@@ -8,6 +8,7 @@ import Footer from "./components/Footer"
 import English from "./pages/English"
 import HvordanPris from "./pages/HvordanPris"
 import Kunderne from "./pages/Kunderne"
+import Om from './pages/Om'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/projekt/:id" element={<Projekt />} />
           <Route path="/hvordan-og-pris" element={<HvordanPris />} />
           <Route path="/english" element={<English />} />
+          <Route path="/om" element={<Om />} />
       </Routes>   
       <Footer/>
     </BrowserRouter>

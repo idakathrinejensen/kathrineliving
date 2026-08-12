@@ -1,0 +1,260 @@
+.reviews-page {
+    width: 100%;
+}
+
+
+/* =========================
+   INTRO
+   ========================= */
+
+.reviews-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 130px 30px 110px;
+    text-align: center;
+}
+
+.reviews-intro h1 {
+    margin: 0 0 30px;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 200;
+    line-height: 1.05;
+}
+
+.reviews-intro > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   FEATURED REVIEW
+   ========================= */
+
+.featured-review {
+    padding: 120px 30px;
+    background-color: var(--offwhite);
+}
+
+.featured-review-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.featured-review h2 {
+    margin: 0 0 35px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--navy);
+}
+
+.featured-review blockquote {
+    max-width: 800px;
+    margin: 0 0 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 200;
+    line-height: 1.3;
+    color: var(--navy);
+}
+
+.featured-review-content > p {
+    max-width: 750px;
+    margin: 0 0 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   SHORT REVIEW
+   ========================= */
+
+.short-review {
+    padding: 120px 30px;
+    text-align: center;
+    background-color: var(--sand);
+}
+
+.short-review blockquote {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 200;
+    line-height: 1.3;
+    color: var(--navy);
+}
+
+.short-review p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   REVIEWS
+   ========================= */
+
+.reviews-section {
+    padding: 130px 30px;
+    background-color: white;
+}
+
+.reviews-heading {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+.reviews-heading h2 {
+    max-width: 650px;
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 200;
+    line-height: 1.1;
+}
+
+
+/* =========================
+   REVIEW GRID
+   ========================= */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: var(--offwhite);
+}
+
+.review-card blockquote {
+    margin: 0 0 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 200;
+    line-height: 1.45;
+    color: var(--navy);
+}
+
+.review-card p {
+    margin: 0 0 18px;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+}
+
+.review-card .review-author {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: var(--navy);
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.reviews-contact {
+    padding: 120px 30px;
+    text-align: center;
+    background-color: var(--offwhite);
+}
+
+.reviews-contact h2 {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 200;
+    line-height: 1.1;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .review-card {
+        padding: 35px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .reviews-intro {
+        padding: 90px 25px;
+    }
+
+    .featured-review {
+        padding: 90px 25px;
+    }
+
+    .short-review {
+        padding: 90px 25px;
+    }
+
+    .reviews-section {
+        padding: 90px 25px;
+    }
+
+    .reviews-heading {
+        margin-bottom: 50px;
+    }
+
+    .reviews-contact {
+        padding: 90px 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .reviews-intro {
+        padding: 75px 20px;
+    }
+
+    .reviews-intro h1 {
+        font-size: 3rem;
+    }
+
+    .featured-review,
+    .short-review,
+    .reviews-section,
+    .reviews-contact {
+        padding: 75px 20px;
+    }
+
+    .review-card {
+        padding: 30px;
+    }
+
+    .featured-review blockquote,
+    .short-review blockquote {
+        font-size: 1.8rem;
+    }
+
+    .review-card blockquote {
+        font-size: 1.25rem;
+    }
+}

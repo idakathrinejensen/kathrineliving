@@ -23,6 +23,7 @@ function Navbar () {
                 <Link to="/projekter">Projekter</Link>
                 <Link to="/hvordan-og-pris">Hvordan og pris</Link>
                 <Link to="/det-siger-kunderne">Det siger kunderne</Link>
+                <Link to="/om">Om</Link>
                 <Link to="/kontakt">Kontakt</Link>
             </div>
         </nav>
