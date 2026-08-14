@@ -4,7 +4,6 @@ import Kontakt from "./pages/Kontakt"
 import Inspiration from "./pages/Inspiration"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-import English from "./pages/English"
 import HvordanPris from "./pages/HvordanPris"
 import Kunderne from "./pages/Kunderne"
 import Om from './pages/Om'
@@ -19,7 +18,6 @@ function App() {
           <Route path="/det-siger-kunderne" element={<Kunderne />} />
           <Route path="/inspiration" element={<Inspiration />} />
           <Route path="/hvordan-og-pris" element={<HvordanPris />} />
-          <Route path="/english" element={<English />} />
           <Route path="/om" element={<Om />} />
       </Routes>   
       <Footer/>
