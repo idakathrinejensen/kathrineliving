@@ -13,14 +13,14 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
-  color: var(--navy);
+  color: var(--jetblack);
 }
 
 :root {
-  --navy: #0D2E4A;
-  --light-blue: #C8DFF0;
-  --offwhite: #F5F2ED;
-  --sand: #D4C9B8;
+  --jetblack: #1E2D3D;
+  --deep-mocha: #654d36;
+  --offwhite: #f9f8f6;
+  --sand: #c18f6e;
   --text: #2C2C2A;
   --text-muted: #6B6560;
 }

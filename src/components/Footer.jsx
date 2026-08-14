@@ -7,8 +7,8 @@ function Footer () {
             <div className="footer-inner">
                 <div className="footer-column">
                     <h3>Nyttige Links</h3>
-                    <Link to="/projekter">Projekter</Link>
-                    <Link to="/hvordan-og-pris">Hvordan & Pris</Link>
+                    <Link to="/inspiration">Inspiration</Link>
+                    <Link to="/hvordan-og-pris">Hvordan og pris</Link>
                     <Link to="/kontakt">Kontakt</Link>
                 </div>
                 <div className="footer-column">

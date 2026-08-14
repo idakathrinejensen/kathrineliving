@@ -10,21 +10,25 @@ function Navbar () {
         const handleScroll = () => {
             setScrolled(window.scrollY > 30)
         }
+
         window.addEventListener('scroll', handleScroll)
+
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     return (
         <nav className={scrolled ? 'scrolled' : ''}>
+
             <Link to="/">
                 <img src={logo} alt="Kathrine Living" height="100"/>
             </Link>
-            <div>
-                <Link to="/projekter">Projekter</Link>
+
+            <div className="nav-links">
+                <Link to="/inspiration">Inspiration</Link>
                 <Link to="/hvordan-og-pris">Hvordan og pris</Link>
                 <Link to="/det-siger-kunderne">Det siger kunderne</Link>
                 <Link to="/om">Om</Link>
-                <Link to="/kontakt">Kontakt</Link>
+                <Link to="/kontakt" className="nav-contact">KONTAKT</Link>
             </div>
         </nav>
     )

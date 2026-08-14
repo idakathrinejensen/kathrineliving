@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Kontakt from "./pages/Kontakt"
-import Projekter from "./pages/Projekter"
-import Projekt from "./pages/Projekt"
+import Inspiration from "./pages/Inspiration"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import English from "./pages/English"
@@ -18,8 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/kontakt" element={<Kontakt/>} />
           <Route path="/det-siger-kunderne" element={<Kunderne />} />
-          <Route path="/projekter" element={<Projekter />} />
-          <Route path="/projekt/:id" element={<Projekt />} />
+          <Route path="/inspiration" element={<Inspiration />} />
           <Route path="/hvordan-og-pris" element={<HvordanPris />} />
           <Route path="/english" element={<English />} />
           <Route path="/om" element={<Om />} />

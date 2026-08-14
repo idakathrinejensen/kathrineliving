@@ -8,6 +8,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     max-width: 900px;
+    margin: 0 auto;
 }
 
 footer h3 {
@@ -16,10 +17,10 @@ footer h3 {
     font-size: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--navy);
+    color: var(--jetblack);
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--navy);
+    border-bottom: 1px solid var(--jetblack);
 }
 
 .footer-column {

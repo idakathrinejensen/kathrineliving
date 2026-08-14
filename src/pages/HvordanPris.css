@@ -1,147 +1,115 @@
-/* =========================
-   GENERAL
-   ========================= */
 
 .how-page {
     width: 100%;
+    padding-top: 60px;
 }
-
-
-/* =========================
-   INTRO
-   ========================= */
 
 .how-intro {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 130px 30px 120px;
-    text-align: center;
-}
-
-.eyebrow {
-    margin: 0 0 20px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    color: var(--text-muted);
+    padding: 140px 40px 100px;
 }
 
 .how-intro h1 {
-    margin: 0 auto 35px;
-    max-width: 800px;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    max-width: 850px;
+    margin: 0 0 40px;
+    font-size: clamp(3rem, 5vw, 5.5rem);
     font-weight: 200;
-    line-height: 1.1;
+    line-height: 1.05;
+    color: var(--jetblack);
 }
 
-.intro-text {
-    max-width: 650px;
-    margin: 0 auto 18px;
-    font-size: 1.05rem;
+.how-intro p {
+    max-width: 1200px;
+    margin: 0 0 18px;
     line-height: 1.8;
     color: var(--text-muted);
 }
 
-
-/* =========================
-   ONLINE INDRETNING
-   ========================= */
-
 .service-section {
-    background-color: var(--offwhite);
-    padding: 120px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: stretch;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.service-image img, .image-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .service-content {
-    max-width: 750px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8%;
+    box-sizing: border-box;
 }
 
-.service-content h2,
-.gift-content h2 {
+.service-content h2 {
+    max-width: 550px;
     margin: 0 0 30px;
-    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 200;
     line-height: 1.1;
-    color: var(--navy);
+    color: var(--jetblack);
 }
 
-.service-content p,
-.gift-content p {
-    max-width: 650px;
-    margin: 0 0 20px;
+.service-content p {
+    max-width: 500px;
+    margin: 0 0 18px;
     font-size: 1rem;
+    font-weight: 300;
     line-height: 1.8;
     color: var(--text-muted);
 }
 
+.gift-section {
+    background-color: white;
+}
 
-/* =========================
-   PRICE
-   ========================= */
+.gift-section .service-content {
+    background-color: white;
+}
 
 .price {
     display: flex;
     align-items: baseline;
-    gap: 8px;
-    margin: 40px 0 30px;
+    gap: 10px;
+    margin: 35px 0 25px;
 }
 
-.price span,
-.gift-price span {
+.price span {
     font-family: 'Raleway', sans-serif;
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 200;
-    color: var(--navy);
+    color: var(--jetblack);
 }
 
-.price small,
-.gift-price small {
-    font-size: 1rem;
+.price small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
     color: var(--text-muted);
 }
 
 
-/* =========================
-   GIFT CARD
-   ========================= */
-
-.gift-section {
-    padding: 130px 30px;
-    background-color: white;
-}
-
-.gift-content {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.gift-intro {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.4rem !important;
-    color: var(--navy) !important;
-}
-
-.gift-price {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin: 40px 0 30px;
-}
-
-
-/* =========================
-   BUTTON
-   ========================= */
-
-.button {
+.how-page .button {
     display: inline-block;
     width: fit-content;
     margin-top: 15px;
     padding: 14px 28px;
-    background-color: var(--navy);
+    background-color: var(--jetblack);
     color: white;
+    border-radius: 4px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
@@ -149,31 +117,30 @@
     transition: opacity 0.2s ease;
 }
 
-.button:hover {
+.how-page .button:hover {
     opacity: 0.8;
 }
 
-
-/* =========================
-   CONTACT
-   ========================= */
-
 .how-contact {
-    padding: 130px 30px;
+    padding: 120px 30px;
     text-align: center;
     background-color: var(--sand);
 }
 
 .how-contact h2 {
     margin: 0 0 25px;
-    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 200;
     line-height: 1.1;
+    color: var(--jetblack);
 }
 
-.how-contact p:not(.eyebrow) {
+.how-contact > p {
     margin: 0 0 30px;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
+    font-weight: 300;
     line-height: 1.8;
     color: var(--text-muted);
 }
@@ -185,9 +152,9 @@
 }
 
 .contact-details a {
-    color: var(--navy);
+    color: var(--jetblack);
     text-decoration: none;
-    border-bottom: 1px solid var(--navy);
+    border-bottom: 1px solid var(--jetblack);
     padding-bottom: 3px;
     transition: opacity 0.2s ease;
 }
@@ -197,34 +164,53 @@
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
-
 @media (max-width: 768px) {
 
     .how-intro {
-        padding: 90px 25px;
+        padding: 90px 7%;
     }
 
-    .service-section,
-    .gift-section {
-        padding: 85px 25px;
+    .how-intro h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
     }
+
+    .how-intro p {
+        margin-left: 0;
+    }
+
+
+    .service-section {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        min-height: 450px;
+        height: 450px;
+    }
+
+    .image-placeholder {
+        min-height: 450px;
+    }
+
+    .service-content {
+        padding: 70px 8%;
+    }
+
+    .service-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .gift-section .service-image {
+        order: 2;
+    }
+
 
     .how-contact {
-        padding: 90px 25px;
+        padding: 90px 8%;
     }
 
-    .service-content h2,
-    .gift-content h2,
     .how-contact h2 {
-        font-size: 2.5rem;
-    }
-
-    .price span,
-    .gift-price span {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
 
     .contact-details {
@@ -237,21 +223,32 @@
 @media (max-width: 480px) {
 
     .how-intro {
-        padding: 75px 20px;
+        padding: 75px 7%;
     }
 
-    .service-section,
-    .gift-section {
-        padding: 70px 20px;
+    .service-image,
+    .image-placeholder {
+        height: 350px;
+        min-height: 350px;
+    }
+
+    .service-content {
+        padding: 60px 7%;
+    }
+
+    .service-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .price span {
+        font-size: 2.6rem;
     }
 
     .how-contact {
-        padding: 75px 20px;
+        padding: 75px 7%;
     }
 
-    .service-content h2,
-    .gift-content h2,
     .how-contact h2 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 }

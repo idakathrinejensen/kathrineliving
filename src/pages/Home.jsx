@@ -1,22 +1,17 @@
 import "./Home.css"
 import { Link } from 'react-router-dom'
-import frontImage from "../assets/FA3EBDB0-7777-406E-A175-A7B8E8F00FFE_1_105_c.jpeg"
+import frontImage from "../assets/inspiration/rumdelerNY.jpg"
 import secondFront from "../assets/_HEY4208.jpg"
 
 function Home() {
     return (
         <main>
-
             <section className="hero">
                 <img src={frontImage} alt="Tapetvæg" />
-
                 <div className="hero-overlay"></div>
-
                 <div className="hero-text">
                     <h1>Skab dit drømmehjem</h1>
-                    <p>
-                        Professionel indretning med hjertet i det skandinaviske
-                    </p>
+                    <p>Professionel indretning med hjertet i det skandinaviske</p>
                 </div>
             </section>
 
@@ -25,34 +20,23 @@ function Home() {
                 <div className="help-image">
                     <img src={secondFront} alt="Skrivebordsindretning" />
                 </div>
-
                 <div className="help-content">
-                    <p className="eyebrow">INDRETNING</p>
-
                     <h2>Inspiration eller hjælp til din indretning</h2>
-
                     <p>
                         Har du brug for inspiration, sparring eller hjælp til
                         at skabe et hjem, der føles som dit?
                     </p>
-
                     <p>
                         Jeg tilbyder både fysiske og online møder, hvor vi
                         sammen finder den rette løsning til dit hjem.
                     </p>
-
-                    <Link to="/hvordan-og-pris" className="button">
-                        Læs mere
-                    </Link>
+                    <Link to="/hvordan-og-pris" className="button">Læs mere</Link>
                 </div>
             </section>
 
-
             <section className="contact-section">
                 <p className="eyebrow">KONTAKT</p>
-
                 <h2>Hjælp til indretning af hjemmet</h2>
-
                 <p>
                     Kontakt gerne på
                     <br />
@@ -64,12 +48,8 @@ function Home() {
                         akj@kathrineliving.dk
                     </a>
                 </p>
-
-                <a href="mailto:akj@kathrineliving.dk" className="button">
-                    Kontakt
-                </a>
+                <a href="mailto:akj@kathrineliving.dk" className="button">KONTAKT</a>
             </section>
-
         </main>
     )
 }
