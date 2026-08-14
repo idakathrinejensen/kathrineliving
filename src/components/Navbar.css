@@ -68,8 +68,94 @@ nav.scrolled .nav-links > a:not(.nav-contact) {
 
 .nav-links .nav-contact:hover {
     background-color: var(--jetblack);
-    color: white;
+    color: var(--offwhite);
     border-radius: 4px;
+}
+
+.burger-menu {
+    display: block !important;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+}
+
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 18px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--jetblack);
+}
+
+.close-icon {
+    height: 28px;
+    width: 28px;
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none !important;
+    }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background-color: var(--offwhite);
+    text-align: left;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+/* Show menu when toggled */
+.mobile-menu.show-menu {
+    display: block;
+}
+
+/* Links inside mobile menu */
+.mobile-menu a {
+    display: block;
+    padding: 28px 3rem;
+    border-bottom: 1px solid var(--deep-mocha);
+    text-decoration: none;
+    color: var(--jetblack);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+.mobile-menu a:hover {
+    color: var(--deep-mocha);
+}
+
+/* Show menu when toggled */
+.show-menu {
+    display: block !important;
+}
+
+/* Style links inside menu */
+.mobile-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--jetblack);
+}
+
+.mobile-menu a:hover {
+    color: var(--deep-mocha) !important;
 }
 
 @media (max-width: 900px) {
@@ -89,7 +175,7 @@ nav.scrolled .nav-links > a:not(.nav-contact) {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     nav {
         padding: 1rem 1.5rem;
@@ -99,16 +185,8 @@ nav.scrolled .nav-links > a:not(.nav-contact) {
         height: 75px;
     }
 
-    .nav-links {
-        gap: 0.8rem;
-    }
-
-    .nav-links > a:not(.nav-contact) {
+    .nav-links > a {
         display: none;
-    }
-
-    .nav-links .nav-contact {
-        padding: 9px 16px;
     }
 
 }
