@@ -11,7 +11,7 @@ function About() {
                 </div>
                 <div className="about-content">
                     <h2>
-                        Indretning med personlighed
+                        E Indretning med personlighed
                     </h2>
                     <p>
                         Kathrine Living har speciale indenfor

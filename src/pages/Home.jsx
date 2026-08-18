@@ -10,7 +10,7 @@ function Home() {
                 <img src={frontImage} alt="Tapetvæg" />
                 <div className="hero-overlay"></div>
                 <div className="hero-text">
-                    <h1>Skab dit drømmehjem</h1>
+                    <h1>E Skab dit drømmehjem</h1>
                     <p>Professionel indretning med hjertet i det skandinaviske</p>
                 </div>
             </section>

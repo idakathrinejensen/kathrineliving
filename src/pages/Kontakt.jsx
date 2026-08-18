@@ -6,7 +6,7 @@ function Kontakt () {
 
     const [state, handleSubmit] = useForm("mbgrkbrw");
     if (state.succeeded) {
-        return <div className='contact-page'><p className='form-completed'>Thanks for joining!</p></div>;
+        return <div className='contact-page'><p className='form-completed'>Tak for at sende en besked, jeg skriver snart tilbage!</p></div>;
     }
 
     const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ function Kontakt () {
                 <h1>Kontakt</h1>
                 <form onSubmit={handleSubmit} className='form-items'>
                     <label htmlFor="name" className='form-item label'>
-                        Name
+                        Navn
                     </label>
                     <input
                         id="name"
@@ -65,7 +65,7 @@ function Kontakt () {
                         autoFocus
                     />
                     <label htmlFor="email" className='form-item label'>
-                        Email Address
+                        Email Addresse
                     </label>
                     <input
                         id="email"
@@ -81,7 +81,7 @@ function Kontakt () {
                         errors={state.errors}
                     />
                     <label htmlFor="message" className='form-item label'>
-                        Message
+                        Besked
                     </label>
                     <textarea
                         id="message"
@@ -100,7 +100,7 @@ function Kontakt () {
                         className={isButtonDisabled ? "submit-button-disabled" : "submit-button-enabled"}
                         disabled={isButtonDisabled || isLoading}
                     >
-                        Submit
+                        Send ind
                     </button>
                 </form>
             </div>

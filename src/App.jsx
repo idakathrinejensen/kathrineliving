@@ -1,28 +1,44 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import Kontakt from "./pages/Kontakt"
-import Inspiration from "./pages/Inspiration"
+import Hjem from './pages/Hjem'
+import Home from './pages/Home'
+import HvordanPris from './pages/HvordanPris'
+import HowPrice from './pages/HowPrice'
+import Kunderne from './pages/Kunderne'
+import Customers from './pages/Customers'
+import Om from './pages/Om'
+import About from './pages/About'
+import Kontakt from './pages/Kontakt'
+import Contact from './pages/Contact'
+import Inspiration from './pages/Inspiration'
+import InspirationEn from './pages/InspirationEn'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-import HvordanPris from "./pages/HvordanPris"
-import Kunderne from "./pages/Kunderne"
-import Om from './pages/Om'
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar/>
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/kontakt" element={<Kontakt/>} />
-          <Route path="/det-siger-kunderne" element={<Kunderne />} />
-          <Route path="/inspiration" element={<Inspiration />} />
-          <Route path="/hvordan-og-pris" element={<HvordanPris />} />
-          <Route path="/om" element={<Om />} />
-      </Routes>   
+        <Route path="/" element={<Hjem />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/hvordan-og-pris" element={<HvordanPris />} />
+        <Route path="/how-and-price" element={<HowPrice />} />
+        <Route path="/det-siger-kunderne" element={<Kunderne />} />
+        <Route path="/what-customers-say" element={<Customers />} />
+        <Route path="/om" element={<Om />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/inspiration" element={<Inspiration />} />
+        <Route path="/inspiration-en" element={<InspirationEn />} />
+      </Routes> 
       <Footer/>
     </BrowserRouter>
   )
 }
 
 export default App
+
+
+
+
