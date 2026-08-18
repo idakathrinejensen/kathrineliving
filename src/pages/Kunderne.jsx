@@ -5,7 +5,7 @@ function Kunderne() {
         <main className="reviews-page">
 
             <section className="reviews-intro">
-                <h1>Hvad siger kunderne?</h1>
+                <h1>D Hvad siger kunderne?</h1>
                 <p>
                     Her kan du læse nogle af de oplevelser og anbefalinger,
                     Kathrine Living har fået fra tidligere kunder.

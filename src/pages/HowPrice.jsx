@@ -8,7 +8,7 @@ function HowPrice() {
 
             <section className="how-intro">
                 <h1>
-                    Indretning med udgangspunkt i dig,
+                    English Indretning med udgangspunkt i dig,
                     dit hjem og dine behov.
                 </h1>
                 <p>

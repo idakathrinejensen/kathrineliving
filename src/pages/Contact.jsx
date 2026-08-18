@@ -6,7 +6,7 @@ function Contact () {
 
     const [state, handleSubmit] = useForm("mbgrkbrw");
     if (state.succeeded) {
-        return <div className='contact-page'><p className='form-completed'>Thanks for joining!</p></div>;
+        return <div className='contact-page'><p className='form-completed'>Thanks for writing, I'll get back to you soon!</p></div>;
     }
 
     const [isLoading, setIsLoading] = useState(false);
@@ -51,7 +51,7 @@ function Contact () {
     return (
         <div className='contact-page'>
             <div className='contact-form'>
-                <h1>Kontakt</h1>
+                <h1>Contact</h1>
                 <form onSubmit={handleSubmit} className='form-items'>
                     <label htmlFor="name" className='form-item label'>
                         Name
