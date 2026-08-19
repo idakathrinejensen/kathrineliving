@@ -188,10 +188,6 @@
     object-position: center;
   }
 
-  .hero-overlay {
-    background: rgba(245, 242, 237, 0.35);
-  }
-
   .hero-text {
     left: 7%;
     right: 7%;
