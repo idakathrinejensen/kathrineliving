@@ -58,42 +58,31 @@ function HowPrice() {
 
             <section className="service-section gift-section">
                 <div className="service-content">
-                    <h2>Gavekort til indretningshjælp</h2>
+                    <h2>Gift voucher for interior design assistance</h2>
                     <p>
-                        Glæd en du holder af eller skriv det på
-                        din egen ønskeseddel.
+                        Treat someone you care about or add it to your own wish list.
+                    </p>
+                    <h3>
+                        A gift for the home - and for anyone looking for fresh ideas
+                    </h3>
+                    <p>
+                        With a gift voucher for interior design assistance, the recipient gets personal advice and inspiration for their home. 
+                        Perhaps there's a room that needs a fresh perspective, a new home that needs to be furnished, 
+                        or simply a desire for a fresh pair of eyes on the space they already have.
                     </p>
                     <p>
-                        Af og til står man i en situation, hvor det kan
-                        være svært at finde den røde tråd i indretningen.
-                        Eller man lige er flyttet og har brug for hjælp
-                        til at få møblerne til at passe ind i de nye
-                        omgivelser.
+                        Together, we explore ideas and solutions that suit the home, the recipient's needs and their personal style.
                     </p>
-                    <p>
-                        Det kan også være, at der er behov for hjælp
-                        til oprydning, fordi man har fået for mange
-                        ting ind i hjemmet.
+                     <p>
+                        The gift voucher covers a one-hour visit. If you would like the voucher to cover a different amount of time, we can arrange that too. 
+                        The gift voucher is sent as a PDF by email, ready for you to print and wrap beautifully yourself. 
+                        The recipient then contacts Kathrine Living to discuss their wishes and needs and arrange a suitable time.
                     </p>
                     <div className="price">
-                        <span>850 kr.</span>
-                        <small>for 1 times besøg</small>
+                        <span>750 kr.</span>
+                        <small>/ hour</small>
                     </div>
-                    <p>
-                        Gavekortet gælder for et besøg på 1 time inden
-                        for en radius på 30 km fra Hillerød.
-                    </p>
-                    <p>
-                        Hvis der er andre ønsker til, hvad gavekortet
-                        skal lyde på, finder vi selvfølgelig ud af det.
-                    </p>
-                    <p>
-                        Gavekortet sendes som PDF på mail - klar til,
-                        at du selv kan printe det ud og pakke det fint ind.
-                        Modtageren af gavekortet kontakter Kathrine Living
-                        for at drøfte ønsker, behov og aftale tidspunkt.
-                    </p>
-                    <a href="mailto:akj@kathrineliving.dk" className="button">Bestil gavekort</a>
+                    <a href="mailto:akj@kathrineliving.dk" className="button">Order gift voucher</a>
                 </div>
                 <div className="service-image">
                     <div className="image-placeholder">

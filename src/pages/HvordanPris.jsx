@@ -63,36 +63,26 @@ function HvordanPris() {
                         Glæd en du holder af eller skriv det på
                         din egen ønskeseddel.
                     </p>
+                    <h3>
+                        En gave til hjemmet - og til den, der gerne vil have nye idéer
+                    </h3>
                     <p>
-                        Af og til står man i en situation, hvor det kan
-                        være svært at finde den røde tråd i indretningen.
-                        Eller man lige er flyttet og har brug for hjælp
-                        til at få møblerne til at passe ind i de nye
-                        omgivelser.
+                        Med et gavekort til indretningshjælp får modtageren personlig sparring og inspiration til sit hjem. 
+                        Måske er der et rum, der trænger til nye idéer, en ny bolig, der skal indrettes, 
+                        eller bare brug for et friskt blik på den indretning, man allerede har.
                     </p>
                     <p>
-                        Det kan også være, at der er behov for hjælp
-                        til oprydning, fordi man har fået for mange
-                        ting ind i hjemmet.
+                        Sammen finder vi frem til muligheder og løsninger, der passer til hjemmet, behovene og den personlige stil.
+                    </p>
+                     <p>
+                        Gavekortet lyder på et besøg på 1 time. Hvis der er andre ønsker til hvad gavekortet skal lyde på, så finder vi ud af det.
+                        Gavekortet sendes som pdf på mail, klar til at du selv kan printe ud og pakke fint ind. 
+                        Modtager af gavekortet kontakter Kathrine Living for at drøfte ønsker, behov og aftale tidspunkt.
                     </p>
                     <div className="price">
-                        <span>850 kr.</span>
-                        <small>for 1 times besøg</small>
+                        <span>750 kr.</span>
+                        <small>/ time</small>
                     </div>
-                    <p>
-                        Gavekortet gælder for et besøg på 1 time inden
-                        for en radius på 30 km fra Hillerød.
-                    </p>
-                    <p>
-                        Hvis der er andre ønsker til, hvad gavekortet
-                        skal lyde på, finder vi selvfølgelig ud af det.
-                    </p>
-                    <p>
-                        Gavekortet sendes som PDF på mail - klar til,
-                        at du selv kan printe det ud og pakke det fint ind.
-                        Modtageren af gavekortet kontakter Kathrine Living
-                        for at drøfte ønsker, behov og aftale tidspunkt.
-                    </p>
                     <a href="mailto:akj@kathrineliving.dk" className="button">Bestil gavekort</a>
                 </div>
                 <div className="service-image">
