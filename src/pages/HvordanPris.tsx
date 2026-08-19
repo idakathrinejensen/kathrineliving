@@ -106,6 +106,12 @@ function HvordanPris() {
                     <a href="mailto:akj@kathrineliving.dk">
                         akj@kathrineliving.dk
                     </a>
+                    <a
+                    href="mailto:akj@kathrineliving.dk"
+                    className="button"
+                    >
+                    KONTAKT
+                </a>
                 </div>
             </section>
         </main>
