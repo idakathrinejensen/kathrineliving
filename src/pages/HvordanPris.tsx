@@ -52,7 +52,6 @@ function HvordanPris() {
                         Kontakt Kathrine Living og lad os lave en aftale
                         på et tidspunkt, der passer dig eller jer.
                     </p>
-                    <a href="mailto:akj@kathrineliving.dk" className="button">KONTAKT</a>
                 </div>
             </section>
 

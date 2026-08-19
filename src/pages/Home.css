@@ -79,7 +79,7 @@
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.15em;
-  color: var(--text-muted);
+  color: var(--jetblack);
 }
 
 .help-content h2 {
@@ -99,7 +99,7 @@
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--text-muted);
+  color: var(--jetblack);
 }
 
 .button {
@@ -146,7 +146,7 @@
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
-  color: var(--text-muted);
+  color: var(--jetblack);
 }
 
 .contact-section p a {

@@ -42,8 +42,6 @@ function Home() {
                     <br />
                     <a href="tel:29447048">29 44 70 48</a>
                     <br />
-                    eller
-                    <br />
                     <a href="mailto:akj@kathrineliving.dk">
                         akj@kathrineliving.dk
                     </a>
