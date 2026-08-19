@@ -93,7 +93,7 @@ function Navbar() {
           to={lang === 'en' ? '/inspiration-en' : '/inspiration'}
           className={({ isActive }) => (isActive ? 'selected' : '')}
         >
-          Inspiration
+          Indtryk og referencer
         </NavLink>
 
         <NavLink

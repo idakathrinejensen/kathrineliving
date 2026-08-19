@@ -65,7 +65,7 @@ function Kontakt () {
                         autoFocus
                     />
                     <label htmlFor="email" className='form-item label'>
-                        Email Addresse
+                        Email
                     </label>
                     <input
                         id="email"
@@ -100,7 +100,7 @@ function Kontakt () {
                         className={isButtonDisabled ? "submit-button-disabled" : "submit-button-enabled"}
                         disabled={isButtonDisabled || isLoading}
                     >
-                        Send ind
+                        Send
                     </button>
                 </form>
             </div>

@@ -218,15 +218,27 @@ nav.scrolled .nav-links > a:not(.nav-contact) {
 @media (max-width: 768px) {
 
     nav {
+
         padding: 1rem 1.5rem;
+
     }
 
     nav > a img {
+
         height: 75px;
+
     }
 
-    .nav-links > a {
+    .nav-links {
+
         display: none;
+
+    }
+
+    .burger-menu {
+
+        display: block !important;
+
     }
 
 }
