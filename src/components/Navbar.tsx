@@ -93,7 +93,7 @@ function Navbar() {
           to={lang === 'en' ? '/inspiration-en' : '/inspiration'}
           className={({ isActive }) => (isActive ? 'selected' : '')}
         >
-          Indtryk og referencer
+          {lang === 'en' ? 'Reviews and References' : 'Indtryk og referencer'}
         </NavLink>
 
         <NavLink
@@ -101,13 +101,6 @@ function Navbar() {
           className={({ isActive }) => (isActive ? 'selected' : '')}
         >
           {lang === 'en' ? 'How and price' : 'Hvordan og pris'}
-        </NavLink>
-
-        <NavLink
-          to={lang === 'en' ? '/what-customers-say' : '/det-siger-kunderne'}
-          className={({ isActive }) => (isActive ? 'selected' : '')}
-        >
-          {lang === 'en' ? 'What customers say' : 'Det siger kunderne'}
         </NavLink>
 
         <NavLink
