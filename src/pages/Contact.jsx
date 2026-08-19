@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useForm, ValidationError } from '@formspree/react';
 import './Kontakt.css'
 
-function Kontakt () {
+function Contact () {
 
     const [state, handleSubmit] = useForm("mbgrkbrw");
     if (state.succeeded) {
-        return <div className='contact-page'><p className='form-completed'>Tak for at sende en besked, jeg skriver snart tilbage!</p></div>;
+        return <div className='contact-page'><p className='form-completed'>Thanks for writing, I'll get back to you soon!</p></div>;
     }
 
     const [isLoading, setIsLoading] = useState(false);
@@ -51,10 +51,10 @@ function Kontakt () {
     return (
         <div className='contact-page'>
             <div className='contact-form'>
-                <h1>Kontakt</h1>
+                <h1>Contact</h1>
                 <form onSubmit={handleSubmit} className='form-items'>
                     <label htmlFor="name" className='form-item label'>
-                        Navn
+                        Name
                     </label>
                     <input
                         id="name"
@@ -65,7 +65,7 @@ function Kontakt () {
                         autoFocus
                     />
                     <label htmlFor="email" className='form-item label'>
-                        Email Addresse
+                        Email Address
                     </label>
                     <input
                         id="email"
@@ -81,7 +81,7 @@ function Kontakt () {
                         errors={state.errors}
                     />
                     <label htmlFor="message" className='form-item label'>
-                        Besked
+                        Message
                     </label>
                     <textarea
                         id="message"
@@ -100,7 +100,7 @@ function Kontakt () {
                         className={isButtonDisabled ? "submit-button-disabled" : "submit-button-enabled"}
                         disabled={isButtonDisabled || isLoading}
                     >
-                        Send ind
+                        Submit
                     </button>
                 </form>
             </div>
@@ -108,4 +108,4 @@ function Kontakt () {
     )
 }
 
-export default Kontakt
+export default Contact

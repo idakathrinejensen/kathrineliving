@@ -2,13 +2,13 @@ import './HvordanPris.css'
 import online from "../assets/inspiration/farvemoodboard.png"
 import gavekort from "../assets/inspiration/tapetcloseup.jpeg"
 
-function HvordanPris() {
+function HowPrice() {
     return (
         <main className="how-page">
 
             <section className="how-intro">
                 <h1>
-                    Danish Indretning med udgangspunkt i dig,
+                    English Indretning med udgangspunkt i dig,
                     dit hjem og dine behov.
                 </h1>
                 <p>
@@ -122,4 +122,4 @@ function HvordanPris() {
     )
 }
 
-export default HvordanPris
+export default HowPrice

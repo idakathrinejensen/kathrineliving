@@ -1,7 +1,7 @@
 import './Om.css'
 import motherImage from '../assets/IMG_6554.jpeg'
 
-function Om() {
+function About() {
     return (
         <main className="about-page">
 
@@ -11,7 +11,7 @@ function Om() {
                 </div>
                 <div className="about-content">
                     <h2>
-                        D Indretning med personlighed
+                        E Indretning med personlighed
                     </h2>
                     <p>
                         Kathrine Living har speciale indenfor
@@ -94,4 +94,4 @@ function Om() {
     )
 }
 
-export default Om
+export default About

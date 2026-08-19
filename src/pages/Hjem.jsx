@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import frontImage from "../assets/inspiration/rumdelerNY.jpg"
 import secondFront from "../assets/_HEY4208.jpg"
 
-function Home() {
+function Hjem() {
     return (
         <main>
             <section className="hero">
                 <img src={frontImage} alt="Tapetvæg" />
                 <div className="hero-overlay"></div>
                 <div className="hero-text">
-                    <h1>E Skab dit drømmehjem</h1>
+                    <h1>D Skab dit drømmehjem</h1>
                     <p>Professionel indretning med hjertet i det skandinaviske</p>
                 </div>
             </section>
@@ -54,4 +54,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Hjem
