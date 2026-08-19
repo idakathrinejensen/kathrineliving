@@ -1,17 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import { getAlternatePath } from '../routeMap';
 import './Navbar.css';
 import logo from '../assets/logo/KathrineLiving_logo_pos.png';
 import closeIcon from '../assets/icons/close.svg';
-
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const menuRef = useRef<HTMLDivElement>(null);
   const burgerRef = useRef<HTMLDivElement>(null);
 
+  // Determine current language from URL
+  const isEnglish =
+    location.pathname.startsWith('/home') ||
+    location.pathname === '/inspiration-en' ||
+    location.pathname === '/how-and-price' ||
+    location.pathname === '/what-customers-say' ||
+    location.pathname === '/about' ||
+    location.pathname === '/contact';
+
+  const lang = isEnglish ? 'en' : 'da';
+
+  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -25,7 +40,7 @@ function Navbar() {
     };
 
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 769) {
         setMenuOpen(false);
       }
     };
@@ -39,6 +54,7 @@ function Navbar() {
     };
   }, []);
 
+  // Scroll state
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
@@ -49,48 +65,172 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Switch language while keeping the equivalent page
+  const switchLanguage = (targetLang: 'da' | 'en') => {
+    const newPath = getAlternatePath(location.pathname, targetLang);
+
+    setMenuOpen(false);
+    navigate(newPath);
+  };
+
+  // Close mobile menu after navigation
+  const handleMobileNavigation = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className={`${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
-      <Link to="/">
+
+      {/* Logo */}
+      <Link to={lang === 'en' ? '/home' : '/'} onClick={() => setMenuOpen(false)}>
         <img src={logo} alt="Kathrine Living" height="100" />
       </Link>
 
+      {/* Desktop navigation */}
       <div className="nav-links">
-        <Link to="/inspiration">Inspiration</Link>
-        <Link to="/hvordan-og-pris">Hvordan og pris</Link>
-        <Link to="/det-siger-kunderne">Det siger kunderne</Link>
-        <Link to="/om">Om</Link>
-        {!menuOpen && (
-            <Link to="/kontakt" className="nav-contact">
-                KONTAKT
-            </Link>
-            )}
-      </div>
 
-      <div
-        ref={burgerRef}
-        className="burger-menu d-flex d-md-none"
-        onClick={() => setMenuOpen((prev) => !prev)}
+        <NavLink
+          to={lang === 'en' ? '/inspiration-en' : '/inspiration'}
+          className={({ isActive }) => (isActive ? 'selected' : '')}
         >
-          {menuOpen ? (
-                <img className="close-icon" src={closeIcon} height="100" />
+          Inspiration
+        </NavLink>
 
-            ) : (
-                <span className="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            )}
+        <NavLink
+          to={lang === 'en' ? '/how-and-price' : '/hvordan-og-pris'}
+          className={({ isActive }) => (isActive ? 'selected' : '')}
+        >
+          {lang === 'en' ? 'How and price' : 'Hvordan og pris'}
+        </NavLink>
+
+        <NavLink
+          to={lang === 'en' ? '/what-customers-say' : '/det-siger-kunderne'}
+          className={({ isActive }) => (isActive ? 'selected' : '')}
+        >
+          {lang === 'en' ? 'What customers say' : 'Det siger kunderne'}
+        </NavLink>
+
+        <NavLink
+          to={lang === 'en' ? '/about' : '/om'}
+          className={({ isActive }) => (isActive ? 'selected' : '')}
+        >
+          {lang === 'en' ? 'About' : 'Om'}
+        </NavLink>
+
+        {/* Language toggle */}
+        <div className="language-toggle">
+          <button
+            className={`language-button ${lang === 'da' ? 'selected' : ''}`}
+            onClick={() => switchLanguage('da')}
+          >
+            DA
+          </button>
+
+          <div className="divider">/</div>
+
+          <button
+            className={`language-button ${lang === 'en' ? 'selected' : ''}`}
+            onClick={() => switchLanguage('en')}
+          >
+            EN
+          </button>
         </div>
 
-      <div ref={menuRef} className={`mobile-menu ${menuOpen ? 'show-menu' : ''}`}>
-        <Link to="/inspiration">Inspiration</Link>
-        <Link to="/hvordan-og-pris">Hvordan og pris</Link>
-        <Link to="/det-siger-kunderne">Det siger kunderne</Link>
-        <Link to="/om">Om</Link>
-        <Link to="/kontakt">Kontakt</Link>
+        {/* Desktop contact button */}
+        {!menuOpen && (
+          <NavLink
+            to={lang === 'en' ? '/contact' : '/kontakt'}
+            className={({ isActive }) =>
+              `nav-contact ${isActive ? 'selected' : ''}`
+            }
+          >
+            {lang === 'en' ? 'CONTACT' : 'KONTAKT'}
+          </NavLink>
+        )}
+
       </div>
+
+      {/* Burger / close button */}
+      <div
+        ref={burgerRef}
+        className="burger-menu"
+        onClick={() => setMenuOpen((prev) => !prev)}
+      >
+        {menuOpen ? (
+          <img
+            className="close-icon"
+            src={closeIcon}
+            alt="Close menu"
+          />
+        ) : (
+          <span className="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        )}
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        ref={menuRef}
+        className={`mobile-menu ${menuOpen ? 'show-menu' : ''}`}
+      >
+        <NavLink
+          to={lang === 'en' ? '/inspiration-en' : '/inspiration'}
+          onClick={handleMobileNavigation}
+        >
+          Inspiration
+        </NavLink>
+
+        <NavLink
+          to={lang === 'en' ? '/how-and-price' : '/hvordan-og-pris'}
+          onClick={handleMobileNavigation}
+        >
+          {lang === 'en' ? 'How and price' : 'Hvordan og pris'}
+        </NavLink>
+
+        <NavLink
+          to={lang === 'en' ? '/what-customers-say' : '/det-siger-kunderne'}
+          onClick={handleMobileNavigation}
+        >
+          {lang === 'en' ? 'What customers say' : 'Det siger kunderne'}
+        </NavLink>
+
+        <NavLink
+          to={lang === 'en' ? '/about' : '/om'}
+          onClick={handleMobileNavigation}
+        >
+          {lang === 'en' ? 'About' : 'Om'}
+        </NavLink>
+
+        {/* Mobile language toggle */}
+        <div className="language-toggle mobile-language-toggle">
+          <button
+            className={`language-button ${lang === 'da' ? 'selected' : ''}`}
+            onClick={() => switchLanguage('da')}
+          >
+            DA
+          </button>
+
+          <div className="divider">/</div>
+
+          <button
+            className={`language-button ${lang === 'en' ? 'selected' : ''}`}
+            onClick={() => switchLanguage('en')}
+          >
+            EN
+          </button>
+        </div>
+
+        <NavLink
+          to={lang === 'en' ? '/contact' : '/kontakt'}
+          onClick={handleMobileNavigation}
+        >
+          {lang === 'en' ? 'Contact' : 'Kontakt'}
+        </NavLink>
+      </div>
+
     </nav>
   );
 }
