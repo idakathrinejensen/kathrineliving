@@ -3,8 +3,6 @@ import Hjem from './pages/Hjem'
 import Home from './pages/Home'
 import HvordanPris from './pages/HvordanPris'
 import HowPrice from './pages/HowPrice'
-import Kunderne from './pages/Kunderne'
-import Customers from './pages/Customers'
 import Om from './pages/Om'
 import About from './pages/About'
 import Kontakt from './pages/Kontakt'
@@ -23,8 +21,6 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/hvordan-og-pris" element={<HvordanPris />} />
         <Route path="/how-and-price" element={<HowPrice />} />
-        <Route path="/det-siger-kunderne" element={<Kunderne />} />
-        <Route path="/what-customers-say" element={<Customers />} />
         <Route path="/om" element={<Om />} />
         <Route path="/about" element={<About />} />
         <Route path="/kontakt" element={<Kontakt />} />
