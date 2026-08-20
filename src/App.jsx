@@ -3,7 +3,7 @@ import Hjem from './pages/Hjem'
 import Home from './pages/Home'
 import HvordanPris from './pages/HvordanPris'
 import HowPrice from './pages/HowPrice'
-import Kunderne from './pages/Kunderne'
+import Kunderne from './pages/Customers'
 import Customers from './pages/Customers'
 import Om from './pages/Om'
 import About from './pages/About'
@@ -29,8 +29,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/inspiration" element={<Inspiration />} />
-        <Route path="/inspiration-en" element={<InspirationEn />} />
+        <Route path="/indtryk-og-referencer" element={<Inspiration />} />
+        <Route path="/reviews-and-references" element={<InspirationEn />} />
       </Routes> 
       <Footer/>
     </BrowserRouter>

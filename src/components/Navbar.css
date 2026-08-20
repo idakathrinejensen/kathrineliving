@@ -31,11 +31,13 @@ nav > a img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
+
 }
 
 .nav-links > a {
     text-decoration: none;
+    min-width: none;
     color: var(--text);
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
@@ -63,7 +65,7 @@ nav.scrolled .nav-links > a:not(.nav-contact) {
     border-radius: 4px;
     border: 1px solid var(--jetblack);
     background-color: var(--jetblack);
-    margin-left: 4.5rem;
+    margin-left: clamp(2rem, 4.5vw, 4.5rem);
     width: 70px;
     justify-content: center;
     color: var(--offwhite);
@@ -201,11 +203,11 @@ nav.scrolled .nav-links > a:not(.nav-contact) {
 @media (max-width: 900px) {
 
     nav {
-        padding: 1.2rem 2rem;
+        padding: clamp(0.8rem, 1.5vw, 1.2rem) clamp(1rem, 2.5vw, 2rem);
     }
 
     .nav-links {
-        gap: 1.2rem;
+        gap: clamp(0.9rem, 1.5vw, 1.2rem);
     }
 
     .nav-links > a {

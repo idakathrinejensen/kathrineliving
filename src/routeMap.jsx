@@ -1,6 +1,6 @@
 export const routeMap = [
   { en: '/home', da: '/' },
-  { en: '/inspiration-en', da: '/inspiration' },
+  { en: '/reviews-and-references', da: '/indtryk-og-referencer' },
   { en: '/how-and-price', da: '/hvordan-og-pris' },
   { en: '/what-customers-say', da: '/det-siger-kunderne' },
   { en: '/about', da: '/om' },

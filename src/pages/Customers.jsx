@@ -1,4 +1,4 @@
-import './Kunderne.css'
+import './Inspiration.css'
 
 function Kunderne() {
     return (
