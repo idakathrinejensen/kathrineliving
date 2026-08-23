@@ -18,7 +18,7 @@ function Navbar() {
   // Determine current language from URL
   const isEnglish =
     location.pathname.startsWith('/home') ||
-    location.pathname === '/inspiration-en' ||
+    location.pathname === '/reviews-and-references' ||
     location.pathname === '/how-and-price' ||
     location.pathname === '/what-customers-say' ||
     location.pathname === '/about' ||
@@ -69,7 +69,7 @@ function Navbar() {
   const switchLanguage = (targetLang: 'da' | 'en') => {
     const newPath = getAlternatePath(location.pathname, targetLang);
 
-    setMenuOpen(false);
+    
     navigate(newPath);
   };
 
@@ -90,7 +90,7 @@ function Navbar() {
       <div className="nav-links">
 
         <NavLink
-          to={lang === 'en' ? '/inspiration-en' : '/inspiration'}
+          to={lang === 'en' ? '/reviews-and-references' : '/indtryk-og-referencer'}
           className={({ isActive }) => (isActive ? 'selected' : '')}
         >
           {lang === 'en' ? 'Reviews and References' : 'Indtryk og referencer'}
@@ -170,10 +170,10 @@ function Navbar() {
         className={`mobile-menu ${menuOpen ? 'show-menu' : ''}`}
       >
         <NavLink
-          to={lang === 'en' ? '/inspiration-en' : '/inspiration'}
+          to={lang === 'en' ? '/' : '/indtryk-og-referencer'}
           onClick={handleMobileNavigation}
         >
-          Inspiration
+          {lang === 'en' ? 'Reviews and References' : 'Indtryk og Referencer'}
         </NavLink>
 
         <NavLink
@@ -197,6 +197,13 @@ function Navbar() {
           {lang === 'en' ? 'About' : 'Om'}
         </NavLink>
 
+        <NavLink
+          to={lang === 'en' ? '/contact' : '/kontakt'}
+          onClick={handleMobileNavigation}
+        >
+          {lang === 'en' ? 'Contact' : 'Kontakt'}
+        </NavLink>
+
         {/* Mobile language toggle */}
         <div className="language-toggle mobile-language-toggle">
           <button
@@ -215,13 +222,6 @@ function Navbar() {
             EN
           </button>
         </div>
-
-        <NavLink
-          to={lang === 'en' ? '/contact' : '/kontakt'}
-          onClick={handleMobileNavigation}
-        >
-          {lang === 'en' ? 'Contact' : 'Kontakt'}
-        </NavLink>
       </div>
 
     </nav>

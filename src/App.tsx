@@ -25,8 +25,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/inspiration" element={<Inspiration />} />
-        <Route path="/inspiration-en" element={<InspirationEn />} />
+        <Route path="/indtryk-og-referencer" element={<Inspiration />} />
+        <Route path="/reviews-and-references" element={<InspirationEn />} />
       </Routes> 
       <Footer/>
     </BrowserRouter>
