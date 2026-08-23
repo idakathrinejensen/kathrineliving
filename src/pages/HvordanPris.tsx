@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import './HvordanPris.css'
 import online from "../assets/inspiration/farvemoodboard.png"
 import gavekort from "../assets/inspiration/tapetcloseup.jpeg"
@@ -105,12 +106,12 @@ function HvordanPris() {
                     <a href="mailto:akj@kathrineliving.dk">
                         akj@kathrineliving.dk
                     </a>
-                    <a
-                    href="mailto:akj@kathrineliving.dk"
+                    <Link
+                    to='/kontakt'
                     className="button"
                     >
                     KONTAKT
-                </a>
+                </Link>
                 </div>
             </section>
         </main>

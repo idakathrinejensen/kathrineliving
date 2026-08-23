@@ -10,11 +10,18 @@
     max-width: 1200px;
     margin: 0 auto;
 
+    /* The grid now acts as a wrapper for the vertical columns */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
+    align-items: start; /* Changed from stretch to allow masonry natural stacking */
+}
 
-    align-items: stretch;
+/* New class for the individual vertical columns */
+.masonry-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Vertical gap between items */
 }
 
 .project-image {
@@ -40,7 +47,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 50px 45px;
-    min-height: 100%;
+    /* Removed min-height: 100% so it sizes naturally */
 }
 
 .project-review-inner {
@@ -142,6 +149,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+    
+    .masonry-column {
+        gap: 15px; /* Sync gap with grid */
+    }
 
     .project-review {
         padding: 35px 40px;
@@ -166,6 +177,10 @@
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+    }
+    
+    .masonry-column {
+        gap: 10px; /* Sync gap with grid */
     }
 
     .project-review {
