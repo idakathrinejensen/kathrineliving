@@ -1,6 +1,6 @@
+import { useState, useEffect } from 'react'
 import './Inspiration.css'
-import {Link} from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 
 import image1 from '../assets/inspiration/entre.jpg'
 import image2 from '../assets/inspiration/levendelys.jpg'
@@ -17,21 +17,21 @@ import image12 from '../assets/inspiration/håndvask.jpeg'
 import image13 from '../assets/inspiration/hvideogguldmøbler.jpeg'
 import image14 from '../assets/inspiration/sæbeholder.jpeg'
 import image15 from '../assets/inspiration/skrivebordsdimser.jpg'
-import image16 from '../assets/inspiration/spisebord.jpg'
+import image16 from '../assets/inspiration/brændeovn.jpg'
 import image17 from '../assets/inspiration/vase.jpg'
 import image18 from '../assets/inspiration/levendelysivindue.jpg'
 import image19 from '../assets/inspiration/buketoglampe.jpg'
 import image20 from '../assets/inspiration/børneværelse.jpg'
 import image21 from '../assets/inspiration/agapanthus.png'
 import image22 from '../assets/inspiration/bambussofa.jpg'
-import image23 from '../assets/inspiration/brændeovn.jpg'
+import image23 from '../assets/inspiration/spisebord.jpg'
 import image24 from '../assets/inspiration/badeværelsesbord.jpeg'
 import image25 from '../assets/inspiration/blomster.jpeg'
 import image26 from '../assets/inspiration/bad.jpg'
 import image27 from '../assets/inspiration/grønstemning.jpeg'
-import image28 from '../assets/inspiration/køkken.jpeg'
+import image28 from '../assets/inspiration/livingroom.jpg'
 import image29 from '../assets/inspiration/fliser.png'
-import image30 from '../assets/inspiration/livingroom.jpg'
+import image30 from '../assets/inspiration/køkken.jpeg'
 import image31 from '../assets/inspiration/maling.jpeg'
 import image32 from '../assets/inspiration/vindueskarm.png'
 import image33 from '../assets/inspiration/vinterindretning.png'
@@ -41,7 +41,6 @@ import image36 from '../assets/inspiration/guldblomsterholdere.jpeg'
 import image37 from '../assets/inspiration/drengeværelse.jpg'
 
 function Inspiration() {
-
     const images = [
         image1,
         image2,
@@ -59,7 +58,7 @@ function Inspiration() {
         image14,
         image15,
         image16,
-        image17, 
+        image17,
         image18,
         image19,
         image20,
@@ -82,29 +81,51 @@ function Inspiration() {
         image37
     ]
 
+    const [colCount, setColCount] = useState(3)
+
+    // Handle responsive column counts matching your CSS media queries
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 900) {
+                setColCount(2)
+            } else {
+                setColCount(3)
+            }
+        }
+
+        // Run once on mount
+        handleResize()
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    // Distribute items into columns to maintain visual left-to-right ordering
+    const columns = Array.from({ length: colCount }, () => [] as string[])
+    images.forEach((image, index) => {
+        columns[index % colCount].push(image)
+    })
+
     return (
         <main className="projects-page">
             <div className="projects-grid">
-                {images.map((image, index) => (
-                    <div className="project-image" key={index}>
-                        <img src={image} alt=""/>
+                {columns.map((col, colIndex) => (
+                    <div className="masonry-column" key={colIndex}>
+                        {col.map((image, itemIndex) => (
+                            <div className="project-image" key={`${colIndex}-${itemIndex}`}>
+                                <img src={image} alt="" />
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>
 
             <section className="reviews-contact">
+                <h2>Skal du også have hjælp til din indretning?</h2>
 
-                <h2>
-                    Skal du også have hjælp til din indretning?
-                </h2>
-
-                <Link
-                    to='/contact'
-                    className="button"
-                >
+                <Link to="/contact" className="button">
                     Contact Kathrine Living
                 </Link>
-
             </section>
         </main>
     )

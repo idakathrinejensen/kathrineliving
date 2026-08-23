@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react'
 import './Inspiration.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import image1 from '../assets/inspiration/entre.jpg'
 import image2 from '../assets/inspiration/levendelys.jpg'
@@ -40,82 +41,63 @@ import image36 from '../assets/inspiration/guldblomsterholdere.jpeg'
 import image37 from '../assets/inspiration/drengeværelse.jpg'
 
 function Inspiration() {
-
     const content = [
         { type: 'image', content: image1 },
         { type: 'image', content: image2 },
         { type: 'image', content: image3 },
-
         {
             type: 'review',
             content: {
-                quote:
-                    'Jeg kan på det varmeste anbefale Anne Kathrine. Hun har hjulpet os med at finde frem til vores helt egen stil i vores lejlighed.',
-                text:
-                    "Det var vigtigt for os, at vores personlige ejendele blev en del af indretningen. Anne Kathrine var utrolig dygtig til at se muligheder, vi ikke selv havde overvejet. Hun lytter, inspirerer og har givet os et hjem, der føles som 'os'.",
+                quote: 'Jeg kan på det varmeste anbefale Anne Kathrine. Hun har hjulpet os med at finde frem til vores helt egen stil i vores lejlighed.',
+                text: "Det var vigtigt for os, at vores personlige ejendele blev en del af indretningen. Anne Kathrine var utrolig dygtig til at se muligheder, vi ikke selv havde overvejet. Hun lytter, inspirerer og har givet os et hjem, der føles som 'os'.",
                 author: 'J. Jørgensen'
             }
         },
-
         { type: 'image', content: image4 },
         { type: 'image', content: image5 },
         { type: 'image', content: image6 },
-
         {
             type: 'review',
             content: {
-                quote:
-                    'Vores stue blev ikke udnyttet optimalt, så vi havde brug for at få professionel hjælp til at få den bedste udnyttelse af stuen.',
-                text:
-                    'Kathrine Living viste sig at være rette person til opgaven. Hun var hurtig til at fange, hvilken type af møbler vi var interesserede i, og hun havde gode forslag både til indretning og til det, der gør en stue hyggelig. Vi kan varmt anbefale Kathrine Living.',
+                quote: 'Vores stue blev ikke udnyttet optimalt, så vi havde brug for at få professionel hjælp til at få den bedste udnyttelse af stuen.',
+                text: 'Kathrine Living viste sig at være rette person til opgaven. Hun var hurtig til at fange, hvilken type af møbler vi var interesserede i, og hun havde gode forslag både til indretning og til det, der gør en stue hyggelig. Vi kan varmt anbefale Kathrine Living.',
                 author: 'M. Poulsen'
             }
         },
-
         { type: 'image', content: image7 },
         { type: 'image', content: image8 },
         { type: 'image', content: image9 },
         { type: 'image', content: image10 },
-
         {
             type: 'review',
             content: {
-                quote:
-                    'Jeg manglede ideer til indretning af hele min lejlighed og valgte Kathrine Living efter en række samtaler med flere udbydere.',
-                text:
-                    'Anne Kathrine gav mig masser af inspiration til indretning, farvesammensætning og strukturer. Hun er en dygtig og kompetent indretter, som er lydhør overfor egne ønsker og har en pragmatisk tilgang til tingene.',
+                quote: 'Jeg manglede ideer til indretning af hele min lejlighed og valgte Kathrine Living efter en række samtaler med flere udbydere.',
+                text: 'Anne Kathrine gav mig masser af inspiration til indretning, farvesammensætning og strukturer. Hun er en dygtig og kompetent indretter, som er lydhør overfor egne ønsker og har en pragmatisk tilgang til tingene.',
                 author: 'J. Lohff'
             }
         },
-
         { type: 'image', content: image11 },
         { type: 'image', content: image12 },
         { type: 'image', content: image13 },
-
         {
             type: 'review',
             content: {
-                quote:
-                    'Og tak for vildt god hjælp, det er jeg så glad for. Det var lige det jeg ønskede. Og det kan meget vel være jeg kontakter dig igen :-).',
+                quote: 'Og tak for vildt god hjælp, det er jeg så glad for. Det var lige det jeg ønskede. Og det kan meget vel være jeg kontakter dig igen :-).',
                 text: '',
                 author: 'H. Soegaard'
             }
         },
-
         { type: 'image', content: image14 },
         { type: 'image', content: image15 },
         { type: 'image', content: image16 },
-
         {
             type: 'review',
             content: {
-                quote:
-                    'Tusind tak for en behagelig og professionel behandling. Vi er så glade for det vi fik lavet.',
+                quote: 'Tusind tak for en behagelig og professionel behandling. Vi er så glade for det vi fik lavet.',
                 text: '',
                 author: 'P. Frost'
             }
         },
-
         { type: 'image', content: image17 },
         { type: 'image', content: image18 },
         { type: 'image', content: image19 },
@@ -139,75 +121,71 @@ function Inspiration() {
         { type: 'image', content: image37 }
     ]
 
+    const [colCount, setColCount] = useState(3)
+
+    // Handle responsive column counts matching your CSS media queries
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 900) {
+                setColCount(2)
+            } else {
+                setColCount(3)
+            }
+        }
+
+        // Run once on mount
+        handleResize()
+        
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    // Distribute items into columns to maintain visual left-to-right ordering
+    const columns = Array.from({ length: colCount }, () => [] as typeof content)
+    content.forEach((item, index) => {
+        columns[index % colCount].push(item)
+    })
 
     return (
         <main className="projects-page">
-
             <div className="projects-grid">
+                {columns.map((col, colIndex) => (
+                    <div className="masonry-column" key={colIndex}>
+                        {col.map((item, itemIndex) => {
+                            if (item.type === 'image') {
+                                return (
+                                    <div className="project-image" key={`${colIndex}-${itemIndex}`}>
+                                        <img src={item.content as string} alt="" />
+                                    </div>
+                                )
+                            }
 
-                {content.map((item, index) => {
+                            const review = item.content as {
+                                quote: string
+                                text: string
+                                author: string
+                            }
 
-                    if (item.type === 'image') {
-                        return (
-                            <div
-                                className="project-image"
-                                key={index}
-                            >
-                                <img
-                                    src={item.content as string}
-                                    alt=""
-                                />
-                            </div>
-                        )
-                    }
-
-                    const review = item.content as {
-                        quote: string
-                        text: string
-                        author: string
-                    }
-
-                    return (
-                        <article
-                            className="project-review"
-                            key={index}
-                        >
-                            <div className="project-review-inner">
-
-                                <blockquote>
-                                    "{review.quote}"
-                                </blockquote>
-
-                                {review.text && (
-                                    <p>{review.text}</p>
-                                )}
-
-                                <p className="project-review-author">
-                                    - {review.author}
-                                </p>
-
-                            </div>
-                        </article>
-                    )
-                })}
-
+                            return (
+                                <article className="project-review" key={`${colIndex}-${itemIndex}`}>
+                                    <div className="project-review-inner">
+                                        <blockquote>"{review.quote}"</blockquote>
+                                        {review.text && <p>{review.text}</p>}
+                                        <p className="project-review-author">- {review.author}</p>
+                                    </div>
+                                </article>
+                            )
+                        })}
+                    </div>
+                ))}
             </div>
 
             <section className="reviews-contact">
-
-                <h2>
-                    Skal du også have hjælp til din indretning?
-                </h2>
-
-                <Link
-                    to='/kontakt'
-                    className="button"
-                >
+                <h2>Skal du også have hjælp til din indretning?</h2>
+                <Link to="/kontakt" className="button">
                     Kontakt Kathrine Living
                 </Link>
-
             </section>
-
         </main>
     )
 }
