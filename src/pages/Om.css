@@ -46,6 +46,7 @@
 
 .about-contact {
     margin-top: 25px;
+    text-align: center;
 }
 
 .about-contact p {
@@ -55,7 +56,6 @@
 
 .about-contact a {
     display: block;
-    width: fit-content;
     margin-bottom: 6px;
     color: var(--jetblack);
     text-decoration: none;
@@ -63,11 +63,6 @@
 
 .about-contact a:hover {
     opacity: 0.7;
-}
-
-.contact-invitation {
-    margin-top: 15px !important;
-    font-style: italic;
 }
 
 .why-section {
@@ -78,6 +73,10 @@
 .why-content {
     max-width: 750px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .why-content h2 {
@@ -87,56 +86,11 @@
     line-height: 1.1;
 }
 
-.why-content p:not(.eyebrow) {
+.why-content p {
     margin: 0 0 22px;
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-muted);
-}
-
-.about-quote {
-    padding: 140px 30px;
-    text-align: center;
-    background-color: var(--sand);
-}
-
-.about-quote blockquote {
-    max-width: 900px;
-    margin: 0 auto 45px;
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(2rem, 4vw, 4rem);
-    font-weight: 200;
-    line-height: 1.2;
-    color: var(--jetblack);
-}
-
-.about-quote p {
-    max-width: 650px;
-    margin: 0 auto 15px;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--text-muted);
-}
-
-.about-quote .quote-ending {
-    margin-top: 30px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
-    color: var(--jetblack);
-}
-
-.about-contact-section {
-    padding: 120px 30px;
-    text-align: center;
-    background-color: var(--offwhite);
-}
-
-.about-contact-section h2 {
-    max-width: 700px;
-    margin: 0 auto 35px;
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    font-weight: 200;
-    line-height: 1.1;
 }
 
 
@@ -158,14 +112,6 @@
     .why-section {
         padding: 90px 25px;
     }
-
-    .about-quote {
-        padding: 100px 25px;
-    }
-
-    .about-contact-section {
-        padding: 90px 25px;
-    }
 }
 
 
@@ -181,8 +127,7 @@
     }
 
     .about-content h2,
-    .why-content h2,
-    .about-contact-section h2 {
+    .why-content h2 {
         font-size: 2.3rem;
     }
 
@@ -190,15 +135,4 @@
         padding: 75px 20px;
     }
 
-    .about-quote {
-        padding: 80px 20px;
-    }
-
-    .about-quote blockquote {
-        font-size: 2rem;
-    }
-
-    .about-contact-section {
-        padding: 75px 20px;
-    }
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ChangeEvent } from "react";
 import { useForm, ValidationError } from '@formspree/react';
 import './Kontakt.css'
 
@@ -24,7 +24,7 @@ function Contact () {
         message: true,
     });
 
-    function handleFilled(e) {
+    function handleFilled(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const newValue = e.target.value;
         const fieldName = e.target.name;
 
@@ -60,7 +60,7 @@ function Contact () {
                         id="name"
                         name="name"
                         className='form-item input'
-                        onInput={handleFilled}
+                        onChange={handleFilled}
                         onBlur={handleFilled}
                         autoFocus
                     />
@@ -72,7 +72,7 @@ function Contact () {
                         type="email" 
                         name="email"
                         className='form-item input'
-                        onInput={handleFilled}
+                        onChange={handleFilled}
                         onBlur={handleFilled}
                     />
                     <ValidationError 
@@ -87,7 +87,7 @@ function Contact () {
                         id="message"
                         name="message"
                         className='form-item input message'
-                        onInput={handleFilled}
+                        onChange={handleFilled}
                         onBlur={handleFilled}
                     />
                     <ValidationError 

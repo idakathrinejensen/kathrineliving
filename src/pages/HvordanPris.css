@@ -142,19 +142,19 @@
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.8;
-    color: var(--text-muted);
+    color: var(--jetblack);
 }
 
 .contact-details {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 35px;
+    align-items: center;
 }
 
 .contact-details a {
     color: var(--jetblack);
     text-decoration: none;
-    border-bottom: 1px solid var(--jetblack);
     padding-bottom: 3px;
     transition: opacity 0.2s ease;
 }

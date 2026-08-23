@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import frontImage from "../assets/inspiration/rumdelerNY.jpg"
 import secondFront from "../assets/_HEY4208.jpg"
 
-function Hjem() {
+function Home() {
     return (
         <main>
             <section className="hero">
                 <img src={frontImage} alt="Tapetvæg" />
                 <div className="hero-overlay"></div>
                 <div className="hero-text">
-                    <h1>D Skab dit drømmehjem</h1>
+                    <h1>E Skab dit drømmehjem</h1>
                     <p>Professionel indretning med hjertet i det skandinaviske</p>
                 </div>
             </section>
@@ -42,8 +42,6 @@ function Hjem() {
                     <br />
                     <a href="tel:29447048">29 44 70 48</a>
                     <br />
-                    eller
-                    <br />
                     <a href="mailto:akj@kathrineliving.dk">
                         akj@kathrineliving.dk
                     </a>
@@ -54,4 +52,4 @@ function Hjem() {
     )
 }
 
-export default Hjem
+export default Home
