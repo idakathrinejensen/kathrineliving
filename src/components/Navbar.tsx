@@ -69,7 +69,7 @@ function Navbar() {
   const switchLanguage = (targetLang: 'da' | 'en') => {
     const newPath = getAlternatePath(location.pathname, targetLang);
 
-    setMenuOpen(false);
+    
     navigate(newPath);
   };
 
@@ -197,6 +197,13 @@ function Navbar() {
           {lang === 'en' ? 'About' : 'Om'}
         </NavLink>
 
+        <NavLink
+          to={lang === 'en' ? '/contact' : '/kontakt'}
+          onClick={handleMobileNavigation}
+        >
+          {lang === 'en' ? 'Contact' : 'Kontakt'}
+        </NavLink>
+
         {/* Mobile language toggle */}
         <div className="language-toggle mobile-language-toggle">
           <button
@@ -215,13 +222,6 @@ function Navbar() {
             EN
           </button>
         </div>
-
-        <NavLink
-          to={lang === 'en' ? '/contact' : '/kontakt'}
-          onClick={handleMobileNavigation}
-        >
-          {lang === 'en' ? 'Contact' : 'Kontakt'}
-        </NavLink>
       </div>
 
     </nav>
