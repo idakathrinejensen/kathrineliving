@@ -46,7 +46,7 @@ function Hjem() {
                         akj@kathrineliving.dk
                     </a>
                 </p>
-                <a href="mailto:akj@kathrineliving.dk" className="button">KONTAKT</a>
+                <Link to='/kontakt' className="button">KONTAKT</Link>
             </section>
         </main>
     )

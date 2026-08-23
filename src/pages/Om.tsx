@@ -1,5 +1,7 @@
 import './Om.css'
 import profileImage from '../assets/IMG_6554.jpeg'
+import {Link} from 'react-router-dom'
+
 
 function Om() {
     return (
@@ -42,12 +44,12 @@ function Om() {
                             akj@kathrineliving.dk
                         </a>
                     </div>
-                <a
-                    href="mailto:akj@kathrineliving.dk"
+                <Link
+                    to='/kontakt'
                     className="button"
                 >
                     KONTAKT
-                </a>
+                </Link>
                 
                 </div>
             </section>

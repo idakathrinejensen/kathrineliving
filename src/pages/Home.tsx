@@ -46,7 +46,7 @@ function Home() {
                         akj@kathrineliving.dk
                     </a>
                 </p>
-                <a href="mailto:akj@kathrineliving.dk" className="button">KONTAKT</a>
+                <Link to='/contact' className="button">CONTACT</Link>
             </section>
         </main>
     )

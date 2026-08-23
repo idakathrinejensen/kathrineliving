@@ -1,4 +1,6 @@
 import './Inspiration.css'
+import {Link} from 'react-router-dom'
+
 
 import image1 from '../assets/inspiration/entre.jpg'
 import image2 from '../assets/inspiration/levendelys.jpg'
@@ -89,6 +91,21 @@ function Inspiration() {
                     </div>
                 ))}
             </div>
+
+            <section className="reviews-contact">
+
+                <h2>
+                    Skal du også have hjælp til din indretning?
+                </h2>
+
+                <Link
+                    to='/contact'
+                    className="button"
+                >
+                    Contact Kathrine Living
+                </Link>
+
+            </section>
         </main>
     )
 }
