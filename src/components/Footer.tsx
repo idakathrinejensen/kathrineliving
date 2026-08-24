@@ -44,6 +44,7 @@ function Footer() {
                     <p>Kathrine Living</p>
                     <p>St. Stendamsvej 5</p>
                     <p>3400 Hillerød</p>
+                    <p>CVR: 31902371</p>
                 </div>
 
                 <div className="footer-column">
