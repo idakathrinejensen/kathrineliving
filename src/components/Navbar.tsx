@@ -173,21 +173,14 @@ function Navbar() {
           to={lang === 'en' ? '/' : '/indtryk-og-referencer'}
           onClick={handleMobileNavigation}
         >
-          {lang === 'en' ? 'Reviews and References' : 'Indtryk og Referencer'}
+          {lang === 'en' ? 'Reviews and References' : 'Indtryk og referencer'}
         </NavLink>
 
         <NavLink
           to={lang === 'en' ? '/how-and-price' : '/hvordan-og-pris'}
           onClick={handleMobileNavigation}
         >
-          {lang === 'en' ? 'How and price' : 'Hvordan og pris'}
-        </NavLink>
-
-        <NavLink
-          to={lang === 'en' ? '/what-customers-say' : '/det-siger-kunderne'}
-          onClick={handleMobileNavigation}
-        >
-          {lang === 'en' ? 'What customers say' : 'Det siger kunderne'}
+          {lang === 'en' ? 'How and Price' : 'Hvordan og pris'}
         </NavLink>
 
         <NavLink
