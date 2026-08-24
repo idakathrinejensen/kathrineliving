@@ -7,8 +7,8 @@ import Om from './pages/Om'
 import About from './pages/About'
 import Kontakt from './pages/Kontakt'
 import Contact from './pages/Contact'
-import Inspiration from './pages/Inspiration'
-import InspirationEn from './pages/InspirationEn'
+import Inspiration from './pages/IndtrykReferencer'
+import InspirationEn from './pages/ReviewsReferences'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import ScrollToTop from './components/ScrollToTop'

@@ -40,7 +40,7 @@ import image35 from '../assets/inspiration/rumdelerNY.jpg'
 import image36 from '../assets/inspiration/guldblomsterholdere.jpeg'
 import image37 from '../assets/inspiration/drengeværelse.jpg'
 
-function Inspiration() {
+function ReviewsReferences() {
     const content = [
         { type: 'image', content: image1 },
         { type: 'image', content: image2 },
@@ -190,4 +190,4 @@ function Inspiration() {
     )
 }
 
-export default Inspiration
+export default ReviewsReferences
