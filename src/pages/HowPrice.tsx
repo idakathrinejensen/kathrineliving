@@ -94,7 +94,7 @@ function HowPrice() {
                 <p>
                     Call or write to Kathrine Living
                     <br />
-                    oand tell us about your wishes and needs.
+                    and tell us about your wishes and needs.
                 </p>
                 <div className="contact-details">
                     <a href="tel:29447048">

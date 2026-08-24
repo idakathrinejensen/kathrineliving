@@ -6,7 +6,7 @@ function Kontakt () {
 
     const [state, handleSubmit] = useForm("mbgrkbrw");
     if (state.succeeded) {
-        return <div className='contact-page'><p className='form-completed'>Tak for at sende en besked, jeg skriver snart tilbage!</p></div>;
+        return <div className='contact-page'><p className='form-completed'>Tak for din henvendelse, jeg skriver snart tilbage!</p></div>;
     }
 
     const [isLoading, setIsLoading] = useState(false);
