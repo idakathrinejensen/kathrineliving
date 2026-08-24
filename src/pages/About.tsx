@@ -38,7 +38,7 @@ function About() {
                     </p>
                     <div className="about-contact">
                         <a href="tel:29447048">
-                            29 44 70 48
+                            +45 29 44 70 48
                         </a>
                         <a href="mailto:akj@kathrineliving.dk">
                             akj@kathrineliving.dk

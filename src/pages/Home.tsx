@@ -38,7 +38,7 @@ function Home() {
                 <p>
                     Feel free to get in touch at:
                     <br />
-                    <a href="tel:29447048">29 44 70 48</a>
+                    <a href="tel:29447048">+45 29 44 70 48</a>
                     <br />
                     <a href="mailto:akj@kathrineliving.dk">
                         akj@kathrineliving.dk
