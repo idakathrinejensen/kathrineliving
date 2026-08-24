@@ -4,7 +4,7 @@ import './Kontakt.css'
 
 function Kontakt () {
 
-    const [state, handleSubmit] = useForm("mbgrkbrw");
+    const [state, handleSubmit] = useForm("xvkpjoka");
     if (state.succeeded) {
         return <div className='contact-page'><p className='form-completed'>Tak for din henvendelse, jeg skriver snart tilbage!</p></div>;
     }
