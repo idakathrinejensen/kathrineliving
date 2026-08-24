@@ -100,7 +100,7 @@ function Navbar() {
           to={lang === 'en' ? '/how-and-price' : '/hvordan-og-pris'}
           className={({ isActive }) => (isActive ? 'selected' : '')}
         >
-          {lang === 'en' ? 'How and price' : 'Hvordan og pris'}
+          {lang === 'en' ? 'How and Price' : 'Hvordan og pris'}
         </NavLink>
 
         <NavLink

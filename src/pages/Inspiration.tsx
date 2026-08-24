@@ -49,7 +49,7 @@ function Inspiration() {
             type: 'review',
             content: {
                 quote: 'Jeg kan på det varmeste anbefale Anne Kathrine. Hun har hjulpet os med at finde frem til vores helt egen stil i vores lejlighed.',
-                text: "Det var vigtigt for os, at vores personlige ejendele blev en del af indretningen. Anne Kathrine var utrolig dygtig til at se muligheder, vi ikke selv havde overvejet. Hun lytter, inspirerer og har givet os et hjem, der føles som 'os'.",
+                text: 'Det var vigtigt for os, at vores personlige ejendele blev en del af indretningen. Anne Kathrine var utrolig dygtig til at se muligheder, vi ikke selv havde overvejet. Hun lytter, inspirerer og har givet os et hjem, der føles som \'os\'.',
                 author: 'J. Jørgensen'
             }
         },

@@ -27,7 +27,11 @@ function Footer() {
                     </Link>
 
                     <Link to={lang === 'en' ? '/how-and-price' : '/hvordan-og-pris'}>
-                        {lang === 'en' ? 'How and price' : 'Hvordan og pris'}
+                        {lang === 'en' ? 'How and Price' : 'Hvordan og pris'}
+                    </Link>
+
+                    <Link to={lang === 'en' ? '/about' : '/om'}>
+                        {lang === 'en' ? 'About' : 'Om'}
                     </Link>
 
                     <Link to={lang === 'en' ? '/contact' : '/kontakt'}>

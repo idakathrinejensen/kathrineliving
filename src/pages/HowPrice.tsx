@@ -9,20 +9,18 @@ function HowPrice() {
 
             <section className="how-intro">
                 <h1>
-                    English Indretning med udgangspunkt i dig,
-                    dit hjem og dine behov.
+                    Interior design based on you,
+                    your home and your needs.
                 </h1>
                 <p>
-                    Af og til kan det være svært at finde den røde tråd
-                    i indretningen. Måske er du lige flyttet, har brug
-                    for at få møblerne til at fungere i de nye omgivelser,
-                    eller trænger hjemmet til at blive ryddet op og
-                    gentænkt.
+                    Sometimes it can be difficult to create a cohesive look in your home.
+                    Perhaps you have just moved, need help making your furniture work in your new surroundings,
+                    or your home simply needs to be decluttered and rethought.
                 </p>
                 <p>
-                    Kathrine Living tilbyder personlig indretningshjælp
-                    og skræddersyede løsninger, der tager udgangspunkt
-                    i din personlige stil, ønsker og behov.
+                    Kathrine Living offers personal interior design assistance
+                    and tailored solutions based on your personal style,
+                    wishes and needs.
                 </p>
             </section>
 
@@ -34,24 +32,24 @@ function HowPrice() {
                 </div>
                 <div className="service-content">
                     <h2>
-                        Online indretning
+                        Online interior design
                     </h2>
                     <p>
-                        Passer det bedre ind i din eller jeres kalender,
-                        at vi mødes online, så kan det sagtens lade sig gøre.
+                        If it works better for you or your schedule
+                        to meet online, that is absolutely possible.
                     </p>
                     <p>
-                        Kathrine Living hjælper dig med skræddersyede
-                        indretningsløsninger, der er tilpasset din personlige
-                        stil, ønsker og behov.
+                        Kathrine Living helps you with tailored
+                        interior design solutions adapted to your personal
+                        style, wishes and needs.
                     </p>
                     <div className="price">
                         <span>750 kr.</span>
-                        <small>/ time</small>
+                        <small>/ hour</small>
                     </div>
                     <p>
-                        Kontakt Kathrine Living og lad os lave en aftale
-                        på et tidspunkt, der passer dig eller jer.
+                        Contact Kathrine Living and let's arrange a time
+                        that works for you.
                     </p>
                 </div>
             </section>
@@ -92,11 +90,11 @@ function HowPrice() {
             </section>
 
             <section className="how-contact">
-                <h2>Skal vi tage en snak?</h2>
+                <h2>Shall we have a chat?</h2>
                 <p>
-                    Ring eller skriv til Kathrine Living
+                    Call or write to Kathrine Living
                     <br />
-                    og fortæl om dine ønsker og behov.
+                    oand tell us about your wishes and needs.
                 </p>
                 <div className="contact-details">
                     <a href="tel:29447048">

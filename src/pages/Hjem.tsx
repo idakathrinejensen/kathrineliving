@@ -10,7 +10,7 @@ function Hjem() {
                 <img src={frontImage} alt="Tapetvæg" />
                 <div className="hero-overlay"></div>
                 <div className="hero-text">
-                    <h1>D Skab dit drømmehjem</h1>
+                    <h1>Skab dit drømmehjem</h1>
                     <p>Professionel indretning med hjertet i det skandinaviske</p>
                 </div>
             </section>
@@ -35,10 +35,9 @@ function Hjem() {
             </section>
 
             <section className="contact-section">
-                <p className="eyebrow">KONTAKT</p>
                 <h2>Hjælp til indretning af hjemmet</h2>
                 <p>
-                    Kontakt gerne på
+                    Kontakt mig gerne på:
                     <br />
                     <a href="tel:29447048">29 44 70 48</a>
                     <br />
