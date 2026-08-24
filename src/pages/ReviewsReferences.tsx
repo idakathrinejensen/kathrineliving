@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './Inspiration.css'
+import './IndtrykReferencer.css'
 import { Link } from 'react-router-dom'
 
 import image1 from '../assets/inspiration/entre.jpg'

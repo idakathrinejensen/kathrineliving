@@ -7,8 +7,8 @@ import Om from './pages/Om'
 import About from './pages/About'
 import Kontakt from './pages/Kontakt'
 import Contact from './pages/Contact'
-import Inspiration from './pages/IndtrykReferencer'
-import InspirationEn from './pages/ReviewsReferences'
+import IndtrykRef from './pages/IndtrykReferencer'
+import ReviewRef from './pages/ReviewsReferences'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import ScrollToTop from './components/ScrollToTop'
@@ -27,8 +27,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/indtryk-og-referencer" element={<Inspiration />} />
-        <Route path="/reviews-and-references" element={<InspirationEn />} />
+        <Route path="/indtryk-og-referencer" element={<IndtrykRef />} />
+        <Route path="/reviews-and-references" element={<ReviewRef />} />
       </Routes> 
       <Footer/>
     </BrowserRouter>

@@ -11,7 +11,7 @@ function Footer() {
         location.pathname === '/what-customers-say' ||
         location.pathname === '/about' ||
         location.pathname === '/contact' ||
-        location.pathname === '/inspiration-en';
+        location.pathname === '/reviews-and-references';
 
     const lang = isEnglish ? 'en' : 'da';
 
