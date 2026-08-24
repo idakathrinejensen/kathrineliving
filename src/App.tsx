@@ -11,10 +11,12 @@ import Inspiration from './pages/Inspiration'
 import InspirationEn from './pages/InspirationEn'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Navbar/>
       <Routes>
         <Route path="/" element={<Hjem />} />
