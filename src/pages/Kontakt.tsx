@@ -83,7 +83,7 @@ function Kontakt() {
                         htmlFor="email"
                         className="form-item label"
                     >
-                        Email Address
+                        Email
                     </label>
 
                     <input
