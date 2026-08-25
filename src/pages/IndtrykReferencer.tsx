@@ -7,7 +7,7 @@ import image2 from '../assets/inspiration/levendelys.jpg'
 import image3 from '../assets/inspiration/skrivebord.jpg'
 import image4 from '../assets/inspiration/tapetcloseup.jpeg'
 import image5 from '../assets/inspiration/tapetvægsoveværelse.jpeg'
-import image6 from '../assets/inspiration/blomster.jpeg'
+import image6 from '../assets/_HEY4208.jpg'
 import image7 from '../assets/inspiration/værelse.jpg'
 import image8 from '../assets/inspiration/citronplakat.jpeg'
 import image9 from '../assets/inspiration/badeværelse.jpg'
@@ -39,6 +39,8 @@ import image34 from '../assets/inspiration/malerprojekt.png'
 import image35 from '../assets/inspiration/rumdelerNY.jpg'
 import image36 from '../assets/inspiration/guldblomsterholdere.jpeg'
 import image37 from '../assets/inspiration/drengeværelse.jpg'
+import image38 from '../assets/inspiration/blomster.jpeg'
+
 
 function IndtrykReferencer() {
     const content = [
@@ -118,7 +120,8 @@ function IndtrykReferencer() {
         { type: 'image', content: image34 },
         { type: 'image', content: image35 },
         { type: 'image', content: image36 },
-        { type: 'image', content: image37 }
+        { type: 'image', content: image37 },
+        { type: 'image', content: image38 }
     ]
 
     const [colCount, setColCount] = useState(3)
