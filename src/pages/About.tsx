@@ -1,5 +1,5 @@
 import './Om.css'
-import profileImage from '../assets/IMG_6554.jpeg'
+import profileImage from '../assets/billeder/IMG_6554.jpeg'
 import {Link} from 'react-router-dom'
 
 

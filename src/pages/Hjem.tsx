@@ -1,7 +1,7 @@
 import "./Home.css"
 import { Link } from 'react-router-dom'
-import frontImage from "../assets/inspiration/rumdelerNY.jpg"
-import secondFront from "../assets/inspiration/arbejdsbord.jpg"
+import frontImage from "../assets/billeder/IMG_5048.jpeg"
+import secondFront from "../assets/billeder/arbejdsbord.jpg"
 
 function Hjem() {
     return (

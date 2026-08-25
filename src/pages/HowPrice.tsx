@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import './HvordanPris.css'
-import online from "../assets/inspiration/farvemoodboard.png"
-import gavekort from "../assets/inspiration/tapetcloseup.jpeg"
+import online from "../assets/billeder/farvemoodboard.png"
+import gavekort from "../assets/billeder/tapetcloseup.jpeg"
 
 function HowPrice() {
     return (
