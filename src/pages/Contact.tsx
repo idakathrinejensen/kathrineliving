@@ -6,33 +6,23 @@ function Contact() {
     const [state, handleSubmit] = useForm("xvkpjoka");
 
     const [isLoading, setIsLoading] = useState(false);
-    const [usernameExists, setUsernameExists] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const [isFilled, setIsFilled] = useState({
         name: false,
         email: false,
+        phone: false,
+        contactPreference: false,
         message: false,
     });
 
-    const [isValidated, setIsValidated] = useState({
-        name: true,
-        email: true,
-        message: true,
-    });
-
     function handleFilled(
-        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
     ) {
         const newValue = e.target.value;
         const fieldName = e.target.name;
 
         setIsFilled((prev) => ({
-            ...prev,
-            [fieldName]: newValue.length > 0,
-        }));
-
-        setIsValidated((prev) => ({
             ...prev,
             [fieldName]: newValue.length > 0,
         }));
@@ -42,16 +32,18 @@ function Contact() {
         const allFilled =
             isFilled.name &&
             isFilled.email &&
+            isFilled.phone &&
+            isFilled.contactPreference &&
             isFilled.message;
 
         setIsButtonDisabled(!allFilled);
-    }, [isFilled, usernameExists]);
+    }, [isFilled]);
 
     if (state.succeeded) {
         return (
             <div className="contact-page">
                 <p className="form-completed">
-                    Thanks for writing, I'll get back to you soon!
+                    Thanks for your enquiry, I'll get back to you soon!
                 </p>
             </div>
         );
@@ -69,7 +61,6 @@ function Contact() {
                     >
                         Name
                     </label>
-
                     <input
                         id="name"
                         name="name"
@@ -77,15 +68,15 @@ function Contact() {
                         onChange={handleFilled}
                         onBlur={handleFilled}
                         autoFocus
+                        required
                     />
 
                     <label
                         htmlFor="email"
                         className="form-item label"
                     >
-                        Email Address
+                        Email
                     </label>
-
                     <input
                         id="email"
                         type="email"
@@ -93,6 +84,7 @@ function Contact() {
                         className="form-item input"
                         onChange={handleFilled}
                         onBlur={handleFilled}
+                        required
                     />
 
                     <ValidationError
@@ -100,6 +92,44 @@ function Contact() {
                         field="email"
                         errors={state.errors}
                     />
+
+                    <label
+                        htmlFor="phone"
+                        className="form-item label"
+                    >
+                        Phone
+                    </label>
+                    <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        className="form-item input"
+                        onChange={handleFilled}
+                        onBlur={handleFilled}
+                        required
+                    />
+
+                    <label
+                        htmlFor="contactPreference"
+                        className="form-item label"
+                    >
+                        How would you prefer to be contacted?
+                    </label>
+                    <select
+                        id="contactPreference"
+                        name="contactPreference"
+                        className="form-item input"
+                        onChange={handleFilled}
+                        onBlur={handleFilled}
+                        defaultValue=""
+                        required
+                    >
+                        <option value="" disabled>
+                            Select contact method
+                        </option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
 
                     <label
                         htmlFor="message"
@@ -114,6 +144,8 @@ function Contact() {
                         className="form-item input message"
                         onChange={handleFilled}
                         onBlur={handleFilled}
+                        required
+                        minLength={10}
                     />
 
                     <ValidationError
