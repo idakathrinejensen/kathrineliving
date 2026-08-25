@@ -107,6 +107,7 @@ function Contact() {
                         onChange={handleFilled}
                         onBlur={handleFilled}
                         required
+                        inputMode="tel"
                     />
 
                     <label
