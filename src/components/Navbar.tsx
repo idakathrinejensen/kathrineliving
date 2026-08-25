@@ -170,7 +170,7 @@ function Navbar() {
         className={`mobile-menu ${menuOpen ? 'show-menu' : ''}`}
       >
         <NavLink
-          to={lang === 'en' ? '/' : '/indtryk-og-referencer'}
+          to={lang === 'en' ? '/reviews-and-references' : '/indtryk-og-referencer'}
           onClick={handleMobileNavigation}
         >
           {lang === 'en' ? 'Reviews and References' : 'Indtryk og referencer'}
