@@ -1,4 +1,3 @@
-
 .how-page {
     width: 100%;
     padding-top: 60px;
@@ -7,12 +6,13 @@
 .how-intro {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 140px 40px 100px;
+    padding: 140px 40px 40px;
 }
 
 .how-intro h1 {
     max-width: 850px;
     margin: 0 0 40px;
+    font-family: 'Raleway', sans-serif;
     font-size: clamp(3rem, 5vw, 5.5rem);
     font-weight: 200;
     line-height: 1.05;
@@ -20,10 +20,43 @@
 }
 
 .how-intro p {
-    max-width: 1200px;
+    max-width: 700px;
     margin: 0 0 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
     line-height: 1.8;
     color: var(--text-muted);
+}
+
+.service-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 40px 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-navigation a {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 4px;
+    background-color: var(--deep-mocha);
+    color: var(--offwhite);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.service-navigation a:hover {
+    background-color: var(--jetblack);
+    transform: translateY(-2px);
 }
 
 .service-section {
@@ -31,6 +64,7 @@
     grid-template-columns: 1fr 1fr;
     width: 100%;
     align-items: stretch;
+    scroll-margin-top: 140px;
 }
 
 .service-image {
@@ -39,10 +73,11 @@
     overflow: hidden;
 }
 
-.service-image img, .image-placeholder {
+.service-image img {
     display: block;
     width: 100%;
     height: 100%;
+    min-height: 650px;
     object-fit: cover;
 }
 
@@ -57,6 +92,7 @@
 .service-content h2 {
     max-width: 550px;
     margin: 0 0 30px;
+    font-family: 'Raleway', sans-serif;
     font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 200;
     line-height: 1.1;
@@ -64,19 +100,20 @@
 }
 
 .service-content p {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 0 18px;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.8;
     color: var(--text-muted);
 }
 
-.gift-section {
-    background-color: white;
+.service-section-reverse {
+    background-color: var(--offwhite);
 }
 
-.gift-section .service-content {
+.gift-section {
     background-color: white;
 }
 
@@ -84,7 +121,7 @@
     display: flex;
     align-items: baseline;
     gap: 10px;
-    margin: 35px 0 25px;
+    margin: 25px 0 20px;
 }
 
 .price span {
@@ -101,24 +138,90 @@
     color: var(--text-muted);
 }
 
-
 .how-page .button {
     display: inline-block;
     width: fit-content;
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 14px 28px;
+    border-radius: 4px;
     background-color: var(--jetblack);
     color: white;
-    border-radius: 4px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition:
+        background-color 0.25s ease,
+        opacity 0.25s ease;
 }
 
 .how-page .button:hover {
     opacity: 0.8;
+}
+
+.process {
+    max-width: 600px;
+    margin: 25px 0 10px;
+}
+
+.process h3 {
+    margin: 0 0 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--jetblack);
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.process-step > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--deep-mocha);
+    color: var(--offwhite);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+}
+
+.process-step h4 {
+    margin: 2px 0 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--jetblack);
+}
+
+.process-step p {
+    margin-bottom: 12px;
+}
+
+.process-step ul {
+    max-width: 500px;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.process-step li {
+    margin-bottom: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.service-summary {
+    margin-top: 10px !important;
+    font-style: italic;
 }
 
 .how-contact {
@@ -150,6 +253,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 8px;
 }
 
 .contact-details a {
@@ -163,32 +267,45 @@
     opacity: 0.6;
 }
 
+.contact-details .button {
+    margin-top: 20px;
+}
+
 
 @media (max-width: 768px) {
 
     .how-intro {
-        padding: 90px 7%;
+        padding: 90px 7% 60px;
     }
 
     .how-intro h1 {
         font-size: clamp(2.5rem, 10vw, 4rem);
     }
 
-    .how-intro p {
-        margin-left: 0;
+    .service-navigation {
+        justify-content: flex-start;
+        padding: 0 7% 70px;
+        gap: 10px;
     }
 
+    .service-navigation a {
+        padding: 11px 17px;
+        font-size: 0.8rem;
+    }
 
     .service-section {
         grid-template-columns: 1fr;
     }
 
+    .service-section-reverse .service-image {
+        order: 2;
+    }
+
     .service-image {
-        min-height: 450px;
         height: 450px;
     }
 
-    .image-placeholder {
+    .service-image img {
         min-height: 450px;
     }
 
@@ -200,10 +317,9 @@
         font-size: 2.7rem;
     }
 
-    .gift-section .service-image {
-        order: 2;
+    .process {
+        margin-top: 20px;
     }
-
 
     .how-contact {
         padding: 90px 8%;
@@ -212,23 +328,29 @@
     .how-contact h2 {
         font-size: 2.7rem;
     }
-
-    .contact-details {
-        flex-direction: column;
-        gap: 15px;
-    }
 }
 
 
 @media (max-width: 480px) {
 
     .how-intro {
-        padding: 75px 7%;
+        padding: 75px 7% 50px;
     }
 
-    .service-image,
-    .image-placeholder {
+    .service-navigation {
+        padding: 0 7% 60px;
+    }
+
+    .service-navigation a {
+        padding: 10px 14px;
+        font-size: 0.78rem;
+    }
+
+    .service-image {
         height: 350px;
+    }
+
+    .service-image img {
         min-height: 350px;
     }
 
@@ -242,6 +364,17 @@
 
     .price span {
         font-size: 2.6rem;
+    }
+
+    .process-step {
+        grid-template-columns: 32px 1fr;
+        gap: 12px;
+    }
+
+    .process-step > span {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
     }
 
     .how-contact {
