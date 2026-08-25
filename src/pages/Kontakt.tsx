@@ -108,6 +108,7 @@ function Kontakt() {
                         onBlur={handleFilled}
                         required
                         inputMode="tel"
+                        pattern="[0-9+ ()-]+"
                     />
 
                     <label
