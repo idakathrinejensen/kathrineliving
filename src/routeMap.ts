@@ -25,3 +25,22 @@ export function getAlternatePath(
 
     return entry[targetLang]
 }
+
+export function getLanguageFromPath(path: string): Language {
+    if (
+        path === '/home' ||
+        path.startsWith('/home/') ||
+        path === '/reviews-and-references' ||
+        path.startsWith('/reviews-and-references/') ||
+        path === '/how-and-price' ||
+        path.startsWith('/how-and-price/') ||
+        path === '/about' ||
+        path.startsWith('/about/') ||
+        path === '/contact' ||
+        path.startsWith('/contact/')
+    ) {
+        return 'en'
+    }
+
+    return 'da'
+}

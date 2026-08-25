@@ -12,6 +12,7 @@ import ReviewRef from './pages/ReviewsReferences'
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import ScrollToTop from './components/ScrollToTop'
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/indtryk-og-referencer" element={<IndtrykRef />} />
         <Route path="/reviews-and-references" element={<ReviewRef />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes> 
       <Footer/>
     </BrowserRouter>
