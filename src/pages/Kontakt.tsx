@@ -4,8 +4,6 @@ import "./Kontakt.css";
 
 function Kontakt() {
     const [state, handleSubmit] = useForm("xvkpjoka");
-
-    const [isLoading, setIsLoading] = useState(false);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const [isFilled, setIsFilled] = useState({
@@ -158,14 +156,21 @@ function Kontakt() {
                     <button
                         type="submit"
                         className={
-                            isButtonDisabled
+                            isButtonDisabled || state.submitting
                                 ? "submit-button-disabled"
                                 : "submit-button-enabled"
                         }
-                        disabled={isButtonDisabled || isLoading}
+                        disabled={isButtonDisabled || state.submitting}
                     >
-                        Send
-                    </button>
+                        {state.submitting ? (
+                        <>
+                            <span className="loading-spinner"></span>
+                            Sender...
+                        </>
+                    ) : (
+                        "Send"
+                    )}
+                </button>
                 </form>
             </div>
         </div>
