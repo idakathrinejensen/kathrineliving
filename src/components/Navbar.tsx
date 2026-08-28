@@ -83,7 +83,7 @@ function Navbar() {
 
       {/* Logo */}
       <Link to={lang === 'en' ? '/home' : '/'} onClick={() => setMenuOpen(false)}>
-        <img src={logo} alt="Kathrine Living" height="100" />
+        <img src={logo} alt="Kathrine Living" height="112" />
       </Link>
 
       {/* Desktop navigation */}
