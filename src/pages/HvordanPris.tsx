@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import "./HvordanPris.css"
 import sparringImage from "../assets/billeder/farvemoodboard.png"
-import stepsIndretningImage from "../assets/billeder/tapetvægsoveværelse.jpeg"
+import salgImage from "../assets/billeder/stuetræmøbel.jpg"
 import gavekortImage from "../assets/billeder/vintagelampe.png"
 import oprydningImage from "../assets/billeder/levendelysivindue.jpg"
-import salgImage from "../assets/billeder/spisebord.jpg"
+import stepsIndretningImage from "../assets/billeder/spisebord.jpg"
 
 function HvordanPris() {
     return (
