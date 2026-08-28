@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./HvordanPris.css"
-import sparringImage from "../assets/billeder/farvemoodboard.png"
+import sparringImage from "../assets/billeder/sparring.jpeg"
 import salgImage from "../assets/billeder/stuetræmøbel.jpg"
 import gavekortImage from "../assets/billeder/vintagelampe.png"
 import oprydningImage from "../assets/billeder/levendelysivindue.jpg"

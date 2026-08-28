@@ -31,7 +31,7 @@ import image32 from '../assets/billeder/vindueskarm.png'
 import image34 from '../assets/billeder/malerprojekt.png'
 import image35 from '../assets/billeder/IMG_5048.jpeg'
 import image37 from '../assets/billeder/drengeværelse.jpg'
-import image38 from '../assets/billeder/blomster.jpeg'
+import image38 from '../assets/billeder/farvemoodboard.png'
 
 import stairsImage from '../assets/billeder/gårpåtrappen.jpeg'
 import diningRoomImage from '../assets/billeder/kundespisestue.jpeg'
