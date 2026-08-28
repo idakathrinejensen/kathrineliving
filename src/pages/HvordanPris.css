@@ -302,7 +302,13 @@
         grid-template-columns: 1fr;
     }
 
+    .service-section .service-image,
     .service-section-reverse .service-image {
+        order: 1;
+    }
+
+    .service-section .service-content,
+    .service-section-reverse .service-content {
         order: 2;
     }
 
