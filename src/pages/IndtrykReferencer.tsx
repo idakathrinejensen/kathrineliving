@@ -37,7 +37,6 @@ import stairsImage from '../assets/billeder/gårpåtrappen.jpeg'
 import diningRoomImage from '../assets/billeder/kundespisestue.jpeg'
 import woodenFurnitureImage from '../assets/billeder/stuetræmøbel.jpg'
 
-import showroom1 from '../assets/billeder/showroom/5D272B12-8CD4-49BC-A086-C24F769FBE87_1_105_c.jpeg'
 import showroom2 from '../assets/billeder/showroom/59E25A35-E99F-4D20-93EB-1D8FC2C45536_1_105_c.jpeg'
 import showroom3 from '../assets/billeder/showroom/5487CE15-7E94-458B-8D23-56FD4D293605_1_102_o.jpeg'
 import showroom4 from '../assets/billeder/showroom/9268CDA7-FAC1-4516-ADAB-1C43491396AF_1_102_o.jpeg'
@@ -127,16 +126,15 @@ function IndtrykReferencer() {
     ]
 
     const showroomImages = [
-        showroom1,
-        showroom2,
-        showroom3,
         showroom4,
+        showroom3,
+        showroom10,
         showroom5,
         showroom6,
         showroom7,
         showroom8,
         showroom9,
-        showroom10
+        showroom2
     ]
 
     const [colCount, setColCount] = useState(3)
