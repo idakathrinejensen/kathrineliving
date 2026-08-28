@@ -139,6 +139,30 @@
     color: var(--jetblack);
 }
 
+.showroom-section {
+    max-width: 1200px;
+    margin: 90px auto 0;
+}
+
+.showroom-section h2 {
+    margin: 0 0 30px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 200;
+    line-height: 1.1;
+
+    color: var(--jetblack);
+}
+
+.showroom-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
 @media (max-width: 900px) {
 
     .projects-page {
@@ -204,5 +228,31 @@
 
     .reviews-contact h2 {
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .showroom-section {
+        margin-top: 70px;
+    }
+
+    .showroom-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .showroom-section {
+        margin-top: 55px;
+    }
+
+    .showroom-grid {
+        gap: 10px;
+    }
+
+    .showroom-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 }
