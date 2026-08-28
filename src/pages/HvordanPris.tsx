@@ -19,7 +19,7 @@ function HvordanPris() {
                 <p>
                     Uanset om du mangler et frisk blik, konkret sparring
                     eller praktisk hjælp til at komme videre, kan Kathrine
-                    Living hjælpe dig.
+                    Living hjælpe dig. 
                 </p>
 
                 <p>
