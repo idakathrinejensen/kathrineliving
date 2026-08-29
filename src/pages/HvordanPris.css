@@ -1,6 +1,24 @@
+:root {
+    --navbar-height: 160px;
+}
+
+@media (max-width: 900px) {
+    :root {
+        /* mirrors nav's padding: clamp(0.8rem, 1.5vw, 1.2rem) vertical, logo height unchanged from desktop (~112px) */
+        --navbar-height: calc(2 * clamp(0.8rem, 1.5vw, 1.2rem) + 112px);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* mirrors nav's fixed 1rem vertical padding + explicit 75px logo height */
+        --navbar-height: 107px;
+    }
+}
+
 .how-page {
     width: 100%;
-    padding-top: 60px;
+    padding-top: var(--navbar-height);
 }
 
 .how-intro {
@@ -68,13 +86,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    align-items: stretch;
+    align-items: start; /* required for sticky image below to work */
     scroll-margin-top: 140px;
 }
 
 .service-image {
+    position: sticky;
+    top: var(--navbar-height);
     width: 100%;
-    height: 100%;
+    height: calc(100vh - var(--navbar-height));
     overflow: hidden;
 }
 
@@ -82,7 +102,6 @@
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 650px;
     object-fit: cover;
 }
 
@@ -92,6 +111,7 @@
     justify-content: center;
     padding: 8%;
     box-sizing: border-box;
+    min-height: calc(100vh - var(--navbar-height)); /* gives the sticky image room to stay pinned while this scrolls */
 }
 
 .service-content h2 {
@@ -302,17 +322,13 @@
         grid-template-columns: 1fr;
     }
 
-    .service-section .service-image,
     .service-section-reverse .service-image {
-        order: 1;
-    }
-
-    .service-section .service-content,
-    .service-section-reverse .service-content {
-        order: 2;
+        order: -1;
     }
 
     .service-image {
+        position: static;
+        top: auto;
         height: 450px;
     }
 
@@ -321,6 +337,7 @@
     }
 
     .service-content {
+        min-height: auto;
         padding: 70px 8%;
     }
 
