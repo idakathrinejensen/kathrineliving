@@ -50,7 +50,7 @@ function HowPrice() {
                     <h2>Advice</h2>
 
                     <p>
-                        Have you got stuck with the interior design of your home,
+                        Feeling stuck with the interior design of your home,
                         and are you looking for some input to make everything
                         come together?
                     </p>
@@ -109,13 +109,13 @@ function HowPrice() {
                     </p>
 
                     <p>
-                        Kathrine Living takes your home, your style and your
+                        Kathrine Living takes your home, your style, and your
                         wishes as a starting point, and together we find
                         solutions that suit you and your home.
                     </p>
 
                     <p>
-                        If it fits better into your schedule to meet online,
+                        If meeting online fits better into your schedule,
                         that is also possible.
                     </p>
 
@@ -173,7 +173,7 @@ function HowPrice() {
                                     wishes and challenges. Together, we look
                                     at the rooms and talk about the possibilities,
                                     from colours and furniture to lighting,
-                                    materials and layout.
+                                    materials, and layout.
                                 </p>
 
                                 <p>
@@ -257,7 +257,7 @@ function HowPrice() {
 
                     <p>
                         Together, we find possibilities and solutions that
-                        suit the home, the needs and the recipient's personal style.
+                        suit the home, the needs, and the recipient's personal style.
                     </p>
 
                     <p>
@@ -310,7 +310,7 @@ function HowPrice() {
 
                     <p>
                         Kathrine Living helps you get an overview, find a good
-                        order in which to tackle things and create a simple
+                        order in which to tackle things, and create a simple
                         structure for getting started, without everything
                         having to be done at once.
                     </p>
