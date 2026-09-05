@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import image1 from '../assets/billeder/entre.jpg'
 import image2 from '../assets/billeder/levendelys.jpg'
 import image3 from '../assets/billeder/skrivebord.jpg'
-import image5 from '../assets/billeder/tapetvægsoveværelse.jpeg'
+import image5 from '../assets/billeder/moodboard.jpg'
 import image6 from '../assets/billeder/_HEY4208.jpg'
 import image7 from '../assets/billeder/værelse.jpg'
 import image8 from '../assets/billeder/citronplakat.jpeg'
@@ -32,6 +32,8 @@ import image34 from '../assets/billeder/malerprojekt.png'
 import image35 from '../assets/billeder/IMG_5048.jpeg'
 import image37 from '../assets/billeder/drengeværelse.jpg'
 import image38 from '../assets/billeder/farvemoodboard.png'
+import image39 from '../assets/billeder/tapetvægsoveværelse.jpeg'
+
 
 import stairsImage from '../assets/billeder/gårpåtrappen.jpeg'
 import diningRoomImage from '../assets/billeder/kundespisestue.jpeg'
@@ -122,7 +124,9 @@ function ReviewsReferences() {
         { type: 'image', content: image34 },
         { type: 'image', content: image35 },
         { type: 'image', content: image37 },
-        { type: 'image', content: image38 }
+        { type: 'image', content: image38 },
+        { type: 'image', content: image39 },
+
     ]
 
     const showroomImages = [
@@ -157,7 +161,15 @@ function ReviewsReferences() {
     const columns = Array.from({ length: colCount }, () => [] as typeof content)
 
     content.forEach((item, index) => {
+        if (item.type === 'image' && item.content === image39) {
+
+        columns[0].push(item)
+
+    } else {
+
         columns[index % colCount].push(item)
+
+    }
     })
 
     return (
