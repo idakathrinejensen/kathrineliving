@@ -159,7 +159,15 @@ function IndtrykReferencer() {
     const columns = Array.from({ length: colCount }, () => [] as typeof content)
 
     content.forEach((item, index) => {
+        if (item.type === 'image' && item.content === image39) {
+
+        columns[0].push(item)
+
+    } else {
+
         columns[index % colCount].push(item)
+
+    }
     })
 
     return (
