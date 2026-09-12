@@ -14,6 +14,8 @@ import Footer from "./components/Footer"
 import ScrollToTop from './components/ScrollToTop'
 import NotFound from "./pages/NotFound";
 
+import { Analytics } from '@vercel/analytics/react'
+
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +36,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes> 
       <Footer/>
+
+      <Analytics />
     </BrowserRouter>
   )
 }
