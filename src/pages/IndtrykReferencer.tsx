@@ -7,7 +7,7 @@ import image2 from '../assets/billeder/levendelys.jpg'
 import image3 from '../assets/billeder/skrivebord.jpg'
 import image5 from '../assets/billeder/moodboard.jpg'
 import image6 from '../assets/billeder/_HEY4208.jpg'
-import image7 from '../assets/billeder/værelse.jpg'
+import image7 from '../assets/billeder/pladespiller.jpeg'
 import image8 from '../assets/billeder/citronplakat.jpeg'
 import image9 from '../assets/billeder/badeværelse.jpg'
 import image14 from '../assets/billeder/sæbeholder.jpeg'
@@ -27,15 +27,17 @@ import image28 from '../assets/billeder/køkken.jpeg'
 import image29 from '../assets/billeder/fliser.png'
 import image30 from '../assets/billeder/livingroom.jpg'
 import image31 from '../assets/billeder/maling.jpeg'
-import image32 from '../assets/billeder/vindueskarm.png'
+import image32 from '../assets/billeder/værelse.jpg'
 import image34 from '../assets/billeder/malerprojekt.png'
 import image35 from '../assets/billeder/IMG_5048.jpeg'
-import image37 from '../assets/billeder/drengeværelse.jpg'
-import image38 from '../assets/billeder/farvemoodboard.png'
+import image37 from '../assets/billeder/farvemoodboard.png'
+import image38 from '../assets/billeder/vindueskarm.png'
 import image39 from '../assets/billeder/tapetvægsoveværelse.jpeg'
-import image40 from '../assets/billeder/levendelysivindue.jpg'
-import image41 from '../assets/billeder/buketoglampe.jpg'
-import image42 from '../assets/billeder/børneværelse.jpg'
+import image40 from '../assets/billeder/børneværelse.jpg'
+import image41 from '../assets/billeder/levendelysivindue.jpg'
+import image42 from '../assets/billeder/buketoglampe.jpg'
+import image43 from '../assets/billeder/drengeværelse.jpg'
+
 
 import stairsImage from '../assets/billeder/gårpåtrappen.jpeg'
 import diningRoomImage from '../assets/billeder/kundespisestue.jpeg'
@@ -131,6 +133,7 @@ function IndtrykReferencer() {
         { type: 'image', content: image40 },
         { type: 'image', content: image41 },
         { type: 'image', content: image42 },
+        { type: 'image', content: image43 },
     ]
 
     const showroomImages = [
