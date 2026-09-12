@@ -13,10 +13,10 @@ import image9 from '../assets/billeder/badeværelse.jpg'
 import image14 from '../assets/billeder/sæbeholder.jpeg'
 import image15 from '../assets/billeder/skrivebordsdimser.jpg'
 import image16 from '../assets/billeder/spisebord.jpg'
-import image18 from '../assets/billeder/levendelysivindue.jpg'
-import image19 from '../assets/billeder/buketoglampe.jpg'
-import image20 from '../assets/billeder/børneværelse.jpg'
-import image21 from '../assets/billeder/agapanthus.png'
+import image18 from '../assets/billeder/agapanthus.png'
+import image19 from '../assets/billeder/badeværelse-håndvask.jpeg'
+import image20 from '../assets/billeder/bruseniche.jpeg'
+import image21 from '../assets/billeder/badeværelse-bruseniche.jpeg'
 import image22 from '../assets/billeder/bambussofa.jpg'
 import image23 from '../assets/billeder/brændeovn.jpg'
 import image24 from '../assets/billeder/badeværelsesbord.jpeg'
@@ -33,6 +33,9 @@ import image35 from '../assets/billeder/IMG_5048.jpeg'
 import image37 from '../assets/billeder/drengeværelse.jpg'
 import image38 from '../assets/billeder/farvemoodboard.png'
 import image39 from '../assets/billeder/tapetvægsoveværelse.jpeg'
+import image40 from '../assets/billeder/levendelysivindue.jpg'
+import image41 from '../assets/billeder/buketoglampe.jpg'
+import image42 from '../assets/billeder/børneværelse.jpg'
 
 import stairsImage from '../assets/billeder/gårpåtrappen.jpeg'
 import diningRoomImage from '../assets/billeder/kundespisestue.jpeg'
@@ -124,7 +127,10 @@ function IndtrykReferencer() {
         { type: 'image', content: image35 },
         { type: 'image', content: image37 },
         { type: 'image', content: image38 },
-        { type: 'image', content: image39 }
+        { type: 'image', content: image39 },
+        { type: 'image', content: image40 },
+        { type: 'image', content: image41 },
+        { type: 'image', content: image42 },
     ]
 
     const showroomImages = [
