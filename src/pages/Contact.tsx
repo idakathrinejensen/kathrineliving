@@ -5,9 +5,11 @@ import "./Kontakt.css";
 function Contact() {
     const [state, handleSubmit] = useForm("xvkpjoka");
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [contactPreference, setContactPreference] = useState("");
 
     const [isFilled, setIsFilled] = useState({
-        name: false,
+        firstName: false,
+        lastName: false,
         email: false,
         phone: false,
         contactPreference: false,
@@ -28,7 +30,8 @@ function Contact() {
 
     useEffect(() => {
         const allFilled =
-            isFilled.name &&
+            isFilled.firstName &&
+            isFilled.lastName &&
             isFilled.email &&
             isFilled.phone &&
             isFilled.contactPreference &&
@@ -54,19 +57,48 @@ function Contact() {
 
                 <form onSubmit={handleSubmit} className="form-items">
                     <label
-                        htmlFor="name"
+                        htmlFor="firstName"
                         className="form-item label"
                     >
-                        Name
+                        First name
                     </label>
                     <input
-                        id="name"
-                        name="name"
+                        id="firstName"
+                        name="firstName"
                         className="form-item input"
                         onChange={handleFilled}
                         onBlur={handleFilled}
                         autoFocus
                         required
+                    />
+
+                    <label
+                        htmlFor="lastName"
+                        className="form-item label"
+                    >
+                        Last name
+                    </label>
+                    <input
+                        id="lastName"
+                        name="lastName"
+                        className="form-item input"
+                        onChange={handleFilled}
+                        onBlur={handleFilled}
+                        required
+                    />
+
+                    <label
+                        htmlFor="city"
+                        className="form-item label"
+                    >
+                        City
+                    </label>
+                    <input
+                        id="city"
+                        name="city"
+                        className="form-item input"
+                        onChange={handleFilled}
+                        onBlur={handleFilled}
                     />
 
                     <label
@@ -119,7 +151,10 @@ function Contact() {
                         id="contactPreference"
                         name="contactPreference"
                         className="form-item input"
-                        onChange={handleFilled}
+                        onChange={(e) => {
+                            handleFilled(e);
+                            setContactPreference(e.target.value);
+                        }}
                         onBlur={handleFilled}
                         defaultValue=""
                         required
@@ -130,6 +165,25 @@ function Contact() {
                         <option value="email">Email</option>
                         <option value="phone">Phone</option>
                     </select>
+
+                    {contactPreference === "phone" && (
+                        <>
+                            <label
+                                htmlFor="callTime"
+                                className="form-item label"
+                            >
+                                When is a good time to call?
+                            </label>
+                            <input
+                                id="callTime"
+                                name="callTime"
+                                className="form-item input"
+                                placeholder="E.g. weekdays between 8 and 9"
+                                onChange={handleFilled}
+                                onBlur={handleFilled}
+                            />
+                        </>
+                    )}
 
                     <label
                         htmlFor="message"
