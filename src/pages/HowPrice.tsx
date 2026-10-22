@@ -76,7 +76,7 @@ function HowPrice() {
                     </p>
 
                     <div className="price">
-                        <span>750 kr.</span>
+                        <span>850 kr.</span>
                         <small>/ hour</small>
                     </div>
 
@@ -274,7 +274,7 @@ function HowPrice() {
                     </p>
 
                     <div className="price">
-                        <span>750 kr.</span>
+                        <span>850 kr.</span>
                         <small>/ hour</small>
                     </div>
 
@@ -327,7 +327,7 @@ function HowPrice() {
                     </p>
 
                     <div className="price">
-                        <span>750 kr.</span>
+                        <span>850 kr.</span>
                         <small>/ hour</small>
                     </div>
 
@@ -409,7 +409,7 @@ function HowPrice() {
                     </p>
 
                     <div className="price">
-                        <span>750 kr.</span>
+                        <span>850 kr.</span>
                         <small>/ hour</small>
                     </div>
 
